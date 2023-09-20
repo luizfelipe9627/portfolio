@@ -1,10 +1,18 @@
-import LogoData from "./LogoData";
 import styles from "./Logo.module.scss";
+import { Link } from "react-router-dom";
 
-export default function Logo() {
+interface LogoDataProps {
+  emphasis?: string;
+  title: string;
+}
+
+export default function LogoData({ emphasis, title }: LogoDataProps) {
   return (
     <div className={styles.logo}>
-      <LogoData emphasis="L" title="uiz" />
+      <Link to="/">
+        <span>{emphasis}</span>
+        {title}
+      </Link>
     </div>
   );
 }

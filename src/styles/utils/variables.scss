@@ -1,12 +1,16 @@
 $first-font: "Poppins", sans-serif !default;
-$second-font: "Clicker", sans-serif;
+$second-font: "Clicker Script", cursive;
 
 :root {
+  --first-font: #{$first-font};
+  --second-font: #{$second-font};
+  
   --bg-black-900: #f2f2fc;
   --bg-black-100: #fdf9ff;
   --bg-black-50: #e8dfce;
+
   --text-black-900: #302e4d;
   --text-black-700: #504e70;
-  --first-font: #{$first-font};
-  --second-font: #{$second-font};
+
+  --skin-color: #ec1839;
 }

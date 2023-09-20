@@ -1,15 +1,26 @@
 import styles from "./NavMenu.module.scss";
-import NavData from "./NavData";
+import { NavLink } from "react-router-dom";
 
-export default function NavMenu() {
+interface NavMenuProps {
+  Title: Array<string>;
+  iClass: Array<string>;
+  href: Array<string>;
+}
+
+export default function NavMenu({ Title, iClass, href }: NavMenuProps) {
   return (
     <nav className={styles.navMenu}>
       <ul>
-        <NavData
-          iText={["Inicio", "Sobre", "Serviços", "Portfólio", "Contato"]}
-          iClass={["home", "user", "list", "briefcase", "comments"]}
-          href={["", "user", "list", "portfolio", "contact"]}
-        />
+        {href.map((item, index) => {
+          return (
+            <li>
+              <NavLink to={`/${item}`} key={index}>
+                <i className={`fa fa-${iClass[index]}`}></i>
+                {Title[index]}
+              </NavLink>
+            </li>
+          );
+        })}
       </ul>
     </nav>
   );
