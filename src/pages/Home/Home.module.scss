@@ -4,7 +4,6 @@
   min-height: 100vh;
   background-color: var(--bg-black-900);
   opacity: 1;
-
   color: var(--text-black-900);
 
   .container {
@@ -17,7 +16,6 @@
   .row {
     display: flex;
     flex-wrap: wrap;
-    margin: 0 -15px 0 -15px;
     position: relative;
 
     .info {
@@ -68,7 +66,7 @@
       border-right: 10px solid var(--skin-color);
       height: 80px;
       width: 80px;
-      right: 20px;
+      right: 0;
       bottom: -40px;
     }
 
@@ -79,7 +77,7 @@
       border-left: 10px solid var(--skin-color);
       height: 80px;
       width: 80px;
-      left: 20px;
+      left: 40px;
       top: -40px;
     }
 
@@ -89,6 +87,7 @@
       object-position: top;
       height: 400px;
       border-radius: 5px;
+      margin-left: 20px;
     }
   }
 }
