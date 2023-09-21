@@ -15,7 +15,7 @@ export default function Home() {
               Sou um <span className={styles.job}>Desenvolvedor Front-end</span>
             </h3>
             <p>
-              Tenho dedicado os últimos dois anos ao estudo e prática do
+              Tenho dedicado os últimos dois anos ao estudo e prática em
               desenvolvimento front-end. Possuo especialização na criação de
               landing pages funcionais, utilizando as tecnologias mais
               atualizadas disponíveis no mercado.
