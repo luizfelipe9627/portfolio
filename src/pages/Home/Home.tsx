@@ -21,7 +21,7 @@ export default function Home() {
               atualizadas disponíveis no mercado.
             </p>
 
-            <Button href="about" buttonText="Entrar em contato" />
+            <Button href="contact" buttonText="Entrar em contato" />
           </div>
 
           <div className={styles.photo}>
