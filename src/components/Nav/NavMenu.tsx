@@ -13,8 +13,8 @@ export default function NavMenu({ Title, iClass, href }: NavMenuProps) {
       <ul>
         {href.map((item, index) => {
           return (
-            <li>
-              <NavLink to={`/${item}`} key={index}>
+            <li key={index}>
+              <NavLink to={`/${item}`}>
                 <i className={`fa fa-${iClass[index]}`}></i>
                 {Title[index]}
               </NavLink>

@@ -6,12 +6,12 @@ import styles from "./Header.module.scss";
 export default function Header() {
   return (
     <header className={styles.header}>
-      <Logo emphasis="L" title="uiz" />
+      <Logo emphasis="A" title="tlas" />
       <NavToggle />
       <NavMenu
         Title={["Inicio", "Sobre", "Serviços", "Portfólio", "Contato"]}
         iClass={["home", "user", "list", "briefcase", "comments"]}
-        href={["", "user", "list", "portfolio", "contact"]}
+        href={["", "about", "services", "portfolio", "contact"]}
       />
     </header>
   );

@@ -1,0 +1,94 @@
+.home {
+  display: flex;
+  height: 100%;
+  min-height: 100vh;
+  background-color: var(--bg-black-900);
+  opacity: 1;
+
+  color: var(--text-black-900);
+
+  .container {
+    max-width: 1100px;
+    width: 100%;
+    margin: auto;
+    padding: 0 30px;
+  }
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px 0 -15px;
+    position: relative;
+
+    .info {
+      flex: 0 0 60%;
+      max-width: 60%;
+
+      .hello {
+        font-size: 28px;
+        margin: 15px 0;
+
+        span {
+          font-family: var(--second-font);
+          font-size: 30px;
+          font-weight: 700;
+          color: var(--skin-color);
+        }
+      }
+
+      .profession {
+        font-size: 30px;
+        margin: 15px 0;
+
+        .job {
+          color: var(--skin-color);
+        }
+      }
+
+      p {
+        margin-bottom: 70px;
+        font-size: 20px;
+        color: var(--text-black-700);
+      }
+    }
+  }
+
+  .photo {
+    flex: 0 0 40%;
+    max-width: 40%;
+    padding-left: 15px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      border-bottom: 10px solid var(--skin-color);
+      border-right: 10px solid var(--skin-color);
+      height: 80px;
+      width: 80px;
+      right: 20px;
+      bottom: -40px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      border-top: 10px solid var(--skin-color);
+      border-left: 10px solid var(--skin-color);
+      height: 80px;
+      width: 80px;
+      left: 20px;
+      top: -40px;
+    }
+
+    img {
+      width: 70%;
+      object-fit: cover;
+      object-position: top;
+      height: 400px;
+      border-radius: 5px;
+    }
+  }
+}

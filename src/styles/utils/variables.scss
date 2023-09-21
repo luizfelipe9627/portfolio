@@ -1,10 +1,28 @@
+@font-face {
+  font-family: "Clicker Script";
+  src: url("../font/ClickerScript-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: (
+    url("../font/Poppins-ExtraLight.ttf") format("truetype") 200,
+    url("../font/Poppins-Light.ttf") format("truetype") 300,
+    url("../font/Poppins-Regular.ttf") format("truetype") 400,
+    url("../font/Poppins-Medium.ttf") format("truetype") 500,
+    url("../font/Poppins-SemiBold.ttf") format("truetype") 600,
+    url("../font/Poppins-Bold.ttf") format("truetype") 700
+  );
+}
+
 $first-font: "Poppins", sans-serif !default;
 $second-font: "Clicker Script", cursive;
 
 :root {
   --first-font: #{$first-font};
   --second-font: #{$second-font};
-  
+
   --bg-black-900: #f2f2fc;
   --bg-black-100: #fdf9ff;
   --bg-black-50: #e8dfce;
