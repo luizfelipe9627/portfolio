@@ -12,12 +12,13 @@ export default function Home() {
               Olá, meu nome é <span className={styles.name}>Luiz Felipe</span>
             </h3>
             <h3 className={styles.profession}>
-              Eu sou um <span className={styles.job}>Desenvolvedor Front-end</span>
+              Sou um <span className={styles.job}>Desenvolvedor Front-end</span>
             </h3>
             <p>
-              Sou um Desenvolvedor Front-End com dois anos de experiência. Tenho
-              expertise na criação de landing pages funcionais, utilizando as
-              mais recentes tecnologias disponíveis no mercado.
+              Tenho dedicado os últimos dois anos ao estudo e prática do
+              desenvolvimento front-end. Possuo especialização na criação de
+              landing pages funcionais, utilizando as tecnologias mais
+              atualizadas disponíveis no mercado.
             </p>
 
             <Button href="about" buttonText="Entrar em contato" />
