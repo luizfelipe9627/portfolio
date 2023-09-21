@@ -7,7 +7,7 @@ function App() {
   return (
     <BrowserRouter>
       <Header />
-      <main className="main-container">
+      <main className="mainContainer">
         <AppRoutes />
       </main>
       <Footer />

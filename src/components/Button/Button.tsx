@@ -3,13 +3,13 @@ import styles from "./Button.module.scss";
 
 interface ButtonProps {
   href: string;
-  buttonText: string;
+  children?: React.ReactNode;
 }
 
-export default function Button({ href, buttonText }: ButtonProps) {
+export default function Button({ href, children }: ButtonProps) {
   return (
     <Link to={`/${href}`}>
-      <button className={styles.button}>{buttonText}</button>
+      <button className={styles.button}>{children}</button>
     </Link>
   );
 }

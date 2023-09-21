@@ -4,6 +4,29 @@ body {
   font-family: var(--first-font);
 }
 
-.main-container {
+.mainContainer {
   padding-left: 270px;
+}
+
+.container {
+  display: flex;
+  min-height: 100vh;
+  background-color: var(--bg-black-900);
+  color: var(--text-black-900);
+  padding: 0 30px;
+}
+
+.animeLeft {
+  transform: translateX(-40px);
+  opacity: 0;
+  /* O forwards faz com que a animação permaneça no estado final */
+  animation: animeLeft 0.3s forwards;
+}
+
+@keyframes animeLeft {
+  /* Está definindo o estado inicial da animação, ou seja, o estado que o elemento se encontra antes de iniciar a animação. */
+  to {
+    transform: initial;
+    opacity: initial;
+  }
 }
