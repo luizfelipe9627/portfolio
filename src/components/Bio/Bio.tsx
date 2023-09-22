@@ -31,36 +31,184 @@ export default function Bio() {
           <div className={styles.row}>
             <div className={styles.info}>
               <div className={styles.infoItem}>
-                <p>Educação : <span>Cursando Técnologo em ADS</span></p>
+                <p>
+                  Cidade : <span>São Paulo</span>
+                </p>
               </div>
               <div className={styles.infoItem}>
-                <p>Cidade : <span>São Paulo</span></p>
+                <p>
+                  Estado : <span>SP</span>
+                </p>
               </div>
 
               <div className={styles.infoItem}>
-                <p>Email : <a href="mailto:felipesilva9627@hotmail.com" target="_blank" rel="noopener noreferrer">felipesilva9627@hotmail.com</a></p>
+                <p>
+                  Email :{" "}
+                  <a
+                    href="mailto:felipesilva9627@hotmail.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    felipesilva9627@hotmail.com
+                  </a>
+                </p>
               </div>
               <div className={styles.infoItem}>
-                <p>Telefone : <a href="tel:11952353969" target="_blank" rel="noopener noreferrer">(11) 95235-3969</a></p>
+                <p>
+                  Telefone :{" "}
+                  <a
+                    href="tel:11952353969"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    (11) 95235-3969
+                  </a>
+                </p>
               </div>
 
               <div className={styles.infoItem}>
-                <p>Linkedin : <a href="https://www.linkedin.com/in/luizfelipe9627" target="_blank" rel="noopener noreferrer">in/luizfelipe9627</a></p>
+                <p>
+                  Linkedin :{" "}
+                  <a
+                    href="https://www.linkedin.com/in/luizfelipe9627"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    in/luizfelipe9627
+                  </a>
+                </p>
               </div>
               <div className={styles.infoItem}>
-                <p>GitHub : <a href="https://github.com/luizfelipe9627" target="_blank" rel="noopener noreferrer">luizfelipe9627</a></p>
+                <p>
+                  GitHub :{" "}
+                  <a
+                    href="https://github.com/luizfelipe9627"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    luizfelipe9627
+                  </a>
+                </p>
               </div>
 
-              <Button href="">Baixar CV</Button>
-              <Button href="">Contate-me</Button>
+              <div className={styles.row}>
+                <div className={styles.buttons}>
+                  <Button
+                    href="https://drive.usercontent.google.com/download?id=1_TrhoOqfIlQie-kBNXyTeolIh67-gNiM&export=download&authuser=0&confirm=t&uuid=c07fd05e-d086-480c-adef-550642ee1dcd&at=APZUnTXd9m_S_lgmXVNSgbW2cb4p:1695338086061"
+                    download
+                  >
+                    Baixar CV
+                  </Button>
+                  <Button link="contact">Contate-me</Button>
+                </div>
+              </div>
             </div>
 
-            <div className={styles.row}>
-              <Button href="">Baixar CV</Button>
-              <Button href="">Contate-me</Button>
+            <div className={styles.skills}>
+              <div className={styles.row}>
+                <div className={styles.skillItem}>
+                  <h5>HTML5</h5>
+                  <div className={styles.progress}>
+                    <div
+                      className={styles.progressIn}
+                      style={{ width: "90%" }}
+                    ></div>
+                    <div className={styles.percentage}>90%</div>
+                  </div>
+                </div>
+
+                <div className={styles.skillItem}>
+                  <h5>CSS3</h5>
+                  <div className={styles.progress}>
+                    <div
+                      className={styles.progressIn}
+                      style={{ width: "90%" }}
+                    ></div>
+                    <div className={styles.percentage}>90%</div>
+                  </div>
+                </div>
+
+                <div className={styles.skillItem}>
+                  <h5>SASS</h5>
+                  <div className={styles.progress}>
+                    <div
+                      className={styles.progressIn}
+                      style={{ width: "80%" }}
+                    ></div>
+                    <div className={styles.percentage}>80%</div>
+                  </div>
+                </div>
+
+                <div className={styles.skillItem}>
+                  <h5>JavaScript</h5>
+                  <div className={styles.progress}>
+                    <div
+                      className={styles.progressIn}
+                      style={{ width: "80%" }}
+                    ></div>
+                    <div className={styles.percentage}>80%</div>
+                  </div>
+                </div>
+
+                <div className={styles.skillItem}>
+                  <h5>Git</h5>
+                  <div className={styles.progress}>
+                    <div
+                      className={styles.progressIn}
+                      style={{ width: "70%" }}
+                    ></div>
+                    <div className={styles.percentage}>70%</div>
+                  </div>
+                </div>
+
+                <div className={styles.skillItem}>
+                  <h5>Github</h5>
+                  <div className={styles.progress}>
+                    <div
+                      className={styles.progressIn}
+                      style={{ width: "80%" }}
+                    ></div>
+                    <div className={styles.percentage}>80%</div>
+                  </div>
+                </div>
+
+                <div className={styles.skillItem}>
+                  <h5>React.JS</h5>
+                  <div className={styles.progress}>
+                    <div
+                      className={styles.progressIn}
+                      style={{ width: "80%" }}
+                    ></div>
+                    <div className={styles.percentage}>80%</div>
+                  </div>
+                </div>
+
+                <div className={styles.skillItem}>
+                  <h5>TypeScript</h5>
+                  <div className={styles.progress}>
+                    <div
+                      className={styles.progressIn}
+                      style={{ width: "70%" }}
+                    ></div>
+                    <div className={styles.percentage}>70%</div>
+                  </div>
+                </div>
+              </div>
             </div>
-  
-            <div className={styles.skills}>Habilidades</div>
+          </div>
+
+          <div className={styles.row}>
+            <div className={styles.education}>
+              <h3 className={styles.title}>Educação</h3>
+              <div className={styles.row}>
+                <div className={styles.timelineBox}>
+                  <div className={styles.timeline}>Linha do tempo</div>
+                </div>
+              </div>
+            </div>
+            <div className={styles.experience}>
+              <h3 className={styles.title}>Experiência</h3>
+            </div>
           </div>
         </div>
       </div>

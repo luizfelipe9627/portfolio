@@ -11,6 +11,10 @@
   white-space: nowrap;
   transition: all 0.3s ease;
 
+  a {
+    color: #fff;
+  }
+
   &:hover {
     transform: scale(1.05);
   }

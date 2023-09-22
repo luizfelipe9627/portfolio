@@ -43,6 +43,8 @@
       margin: 0 15px;
 
       .text {
+        margin-bottom: 40px;
+
         h3 {
           font-size: 24px;
           margin-bottom: 15px;
@@ -60,40 +62,104 @@
           color: var(--text-black-700);
         }
       }
-    }
 
-    .row {
-      display: flex;
-      margin-bottom: 40px;
+      .row {
+        display: flex;
+        .info {
+          flex: 0 0 60%;
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          max-height: 135px;
 
-      .info {
-        flex: 0 0 60%;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
+          .infoItem {
+            p {
+              font-weight: 600;
+              padding: 10px 0;
+              font-size: 16px;
+              color: var(--text-black-900);
+              border-bottom: 1px solid var(--bg-black-50);
 
-        .infoItem {
-          p {
-            font-weight: 600;
-            padding: 10px 0;
-            font-size: 16px;
-            color: var(--text-black-900);
-            border-bottom: 1px solid var(--bg-black-50);
+              span,
+              a {
+                font-weight: 400;
+                color: var(--text-black-700);
+                margin-left: 4px;
+              }
 
-            span, a {
-              font-weight: 400;
-              color: var(--text-black-700);
-              margin-left: 4px;
-              display: inline-block;
+              a {
+                text-decoration: underline;
+              }
             }
           }
-          
+
+          .buttons {
+            display: flex;
+            margin-top: 30px;
+            button {
+              margin-right: 15px;
+            }
+          }
+        }
+
+        .skills {
+          flex: 0 0 40%;
+          padding-left: 15px;
+
+          .row {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            column-gap: 50px;
+
+            .skillItem {
+              margin-bottom: 25px;
+              h5 {
+                line-height: 40px;
+                font-weight: 600;
+                font-size: 16px;
+                color: var(--text-black-900);
+                text-transform: capitalize;
+              }
+
+              .progress {
+                background-color: var(--bg-black-50);
+                height: 7px;
+                border-radius: 4px;
+                width: 100%;
+                position: relative;
+              }
+
+              .progressIn {
+                position: absolute;
+                left: 0;
+                top: 0;
+                height: 100%;
+                border-radius: 4px;
+                background-color: var(--skin-color);
+              }
+
+              .percentage {
+                position: absolute;
+                right: 0;
+                color: var(--text-black-900);
+                top: -40px;
+                font-weight: 400;
+                line-height: 40px;
+              }
+            }
+          }
         }
       }
 
-      .skills {
-        flex: 0 0 40%;
-        padding-left: 15px;
-        background-color: green;
+      .education,
+      .experience {
+        flex: 0 0 50%;
+        margin-top: 30px;
+
+        .title {
+          margin: 0 0 30px 0;
+          font-size: 24px;
+          font-weight: 700;
+        }
       }
     }
   }
