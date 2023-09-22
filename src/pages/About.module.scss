@@ -6,8 +6,7 @@
 
   .row {
     .title {
-      flex: 0 0 100%;
-      max-width: 100%;
+      width: 100%;
       margin: 0 15px 60px 15px;
 
       h2 {
@@ -66,31 +65,10 @@
       .row {
         display: flex;
         .info {
-          flex: 0 0 60%;
+          width: 60%;
           display: grid;
           grid-template-columns: repeat(2, 1fr);
           max-height: 135px;
-
-          .infoItem {
-            p {
-              font-weight: 600;
-              padding: 10px 0;
-              font-size: 16px;
-              color: var(--text-black-900);
-              border-bottom: 1px solid var(--bg-black-50);
-
-              span,
-              a {
-                font-weight: 400;
-                color: var(--text-black-700);
-                margin-left: 4px;
-              }
-
-              a {
-                text-decoration: underline;
-              }
-            }
-          }
 
           .buttons {
             display: flex;
@@ -102,63 +80,39 @@
         }
 
         .skills {
-          flex: 0 0 40%;
+          width: 40%;
           padding-left: 15px;
 
           .row {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             column-gap: 50px;
-
-            .skillItem {
-              margin-bottom: 25px;
-              h5 {
-                line-height: 40px;
-                font-weight: 600;
-                font-size: 16px;
-                color: var(--text-black-900);
-                text-transform: capitalize;
-              }
-
-              .progress {
-                background-color: var(--bg-black-50);
-                height: 7px;
-                border-radius: 4px;
-                width: 100%;
-                position: relative;
-              }
-
-              .progressIn {
-                position: absolute;
-                left: 0;
-                top: 0;
-                height: 100%;
-                border-radius: 4px;
-                background-color: var(--skin-color);
-              }
-
-              .percentage {
-                position: absolute;
-                right: 0;
-                color: var(--text-black-900);
-                top: -40px;
-                font-weight: 400;
-                line-height: 40px;
-              }
-            }
           }
         }
       }
 
+      .education {
+        margin-right: 15px;
+      }
+
       .education,
       .experience {
-        flex: 0 0 50%;
+        width: 50%;
         margin-top: 30px;
-
         .title {
           margin: 0 0 30px 0;
           font-size: 24px;
           font-weight: 700;
+        }
+
+        .timeline {
+          width: 100%;
+          background-color: var(--bg-black-100);
+          padding: 30px 15px;
+          border: 1px solid var(--bg-black-50);
+          border-radius: 10px;
+          position: relative;
+          box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
         }
       }
     }
