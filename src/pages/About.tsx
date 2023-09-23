@@ -8,12 +8,12 @@ import TimelineItem from "../components/TimelineItem/TimelineItem";
 export default function About() {
   return (
     <section
-      className="container animeLeft"
+      className="containerSection animeLeft"
       style={{ display: "block", left: "270px" }}
     >
-      <div className={styles.container}>
+      <div className="container">
         <div className={styles.row}>
-          <div className={styles.title}>
+          <div className="title">
             <h2>Sobre mim</h2>
           </div>
         </div>

@@ -1,119 +1,79 @@
-.container {
-  max-width: 1200px;
-  width: 100%;
-  margin: auto;
-  padding: 60px 0 70px 0;
+.row {
+  .content {
+    margin: 0 15px;
 
-  .row {
-    .title {
-      width: 100%;
-      margin: 0 15px 60px 15px;
+    .text {
+      margin-bottom: 40px;
 
-      h2 {
-        font-size: 40px;
-        color: var(--text-black-900);
+      h3 {
+        font-size: 24px;
+        margin-bottom: 15px;
         font-weight: 700;
-        position: relative;
+        color: var(--text-black-900);
 
-        &::before {
-          content: "";
-          height: 4px;
-          width: 50px;
-          background-color: var(--skin-color);
-          position: absolute;
-          top: 100%;
-          left: 0;
+        span {
+          color: var(--skin-color);
         }
+      }
 
-        &::after {
-          content: "";
-          height: 4px;
-          width: 25px;
-          background-color: var(--skin-color);
-          position: absolute;
-          top: 100%;
-          left: 0;
-          margin-top: 8px;
+      p {
+        font-size: 16px;
+        line-height: 25px;
+        color: var(--text-black-700);
+      }
+    }
+
+    .row {
+      display: flex;
+      .info {
+        width: 60%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        max-height: 135px;
+
+        .buttons {
+          display: flex;
+          margin-top: 30px;
+          button {
+            margin-right: 15px;
+          }
+        }
+      }
+
+      .skills {
+        width: 40%;
+        padding-left: 15px;
+
+        .row {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          column-gap: 50px;
         }
       }
     }
 
-    .content {
-      margin: 0 15px;
+    .education {
+      margin-right: 15px;
+    }
 
-      .text {
-        margin-bottom: 40px;
-
-        h3 {
-          font-size: 24px;
-          margin-bottom: 15px;
-          font-weight: 700;
-          color: var(--text-black-900);
-
-          span {
-            color: var(--skin-color);
-          }
-        }
-
-        p {
-          font-size: 16px;
-          line-height: 25px;
-          color: var(--text-black-700);
-        }
+    .education,
+    .experience {
+      width: 50%;
+      margin-top: 30px;
+      .title {
+        margin: 0 0 30px 0;
+        font-size: 24px;
+        font-weight: 700;
       }
 
-      .row {
-        display: flex;
-        .info {
-          width: 60%;
-          display: grid;
-          grid-template-columns: repeat(2, 1fr);
-          max-height: 135px;
-
-          .buttons {
-            display: flex;
-            margin-top: 30px;
-            button {
-              margin-right: 15px;
-            }
-          }
-        }
-
-        .skills {
-          width: 40%;
-          padding-left: 15px;
-
-          .row {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            column-gap: 50px;
-          }
-        }
-      }
-
-      .education {
-        margin-right: 15px;
-      }
-
-      .education,
-      .experience {
-        width: 50%;
-        margin-top: 30px;
-        .title {
-          margin: 0 0 30px 0;
-          font-size: 24px;
-          font-weight: 700;
-        }
-
-        .timeline {
-          width: 100%;
-          background-color: var(--bg-black-100);
-          padding: 30px 15px;
-          border: 1px solid var(--bg-black-50);
-          border-radius: 10px;
-          position: relative;
-          box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
-        }
+      .timeline {
+        width: 100%;
+        background-color: var(--bg-black-100);
+        padding: 30px 15px;
+        border: 1px solid var(--bg-black-50);
+        border-radius: 10px;
+        position: relative;
+        box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
       }
     }
   }

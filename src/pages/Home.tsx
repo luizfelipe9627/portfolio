@@ -3,7 +3,7 @@ import photo from "../assets/img/profile.jpg";
 
 export default function Home() {
   return (
-    <section className="container animeLeft" style={{ display: "flex" }}>
+    <section className="containerSection animeLeft" style={{ display: "flex" }}>
       <Profile
         presentation="Olá, meu nome é"
         name="Luiz Felipe"
