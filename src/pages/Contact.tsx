@@ -5,36 +5,48 @@ import Input from "../components/Form/Input";
 import Textarea from "../components/Form/Textarea";
 import Title from "../components/Title/Title";
 import styles from "./Contact.module.scss";
+import emailjs from "@emailjs/browser";
 
 export default function Contact() {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [subject, setSubject] = useState("");
+  const [message, setMessage] = useState("");
+
   function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    console.log(formData);
-    setFormData({
-      name: "",
-      email: "",
-      subject: "",
-      message: "",
-    });
-  }
 
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    subject: "",
-    message: "",
-  });
+    const templateParams = {
+      name: name,
+      email: email,
+      subject: subject,
+      message: message,
+    };
 
-  function handleChange(
-    event:
-      | React.ChangeEvent<HTMLInputElement>
-      | React.ChangeEvent<HTMLTextAreaElement>,
-  ) {
-    const { name, value } = event.target;
-    setFormData({
-      ...formData,
-      [name]: value,
-    });
+    emailjs
+      .send(
+        "service_kbmlnav",
+        "template_pu73bpu",
+        templateParams,
+        "8MoajfaFVwn0NMxad",
+      )
+      .then(
+        (response) => {
+          console.log(
+            "Mensagem enviada com sucesso!",
+            response.status,
+            response.text,
+          );
+        },
+        (err) => {
+          console.log("Ocorreu um erro ao enviar a mensagem...", err);
+        },
+      );
+
+    setName("");
+    setEmail("");
+    setSubject("");
+    setMessage("");
   }
 
   return (
@@ -82,8 +94,8 @@ export default function Contact() {
                 placeholder="Nome"
                 id="name"
                 name="name"
-                value={formData.name}
-                onChange={handleChange}
+                value={name}
+                onChange={(e) => setName(e.target.value)}
                 required
               />
               <Input
@@ -91,8 +103,8 @@ export default function Contact() {
                 placeholder="Email"
                 id="email"
                 name="email"
-                value={formData.email}
-                onChange={handleChange}
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
                 required
               />
             </div>
@@ -103,8 +115,8 @@ export default function Contact() {
                 id="subject"
                 name="subject"
                 placeholder="Assunto"
-                value={formData.subject}
-                onChange={handleChange}
+                value={subject}
+                onChange={(e) => setSubject(e.target.value)}
                 required
               />
             </div>
@@ -114,8 +126,8 @@ export default function Contact() {
                 placeholder="Mensagem"
                 name="message"
                 id="message"
-                value={formData.message}
-                onChange={handleChange}
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
                 required
               />
             </div>
