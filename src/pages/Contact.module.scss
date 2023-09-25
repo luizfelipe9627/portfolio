@@ -13,8 +13,26 @@
   margin-bottom: 60px;
 }
 
-.row {
+.rowContact {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   row-gap: 30px;
+}
+
+.form {
+  .row {
+    &:nth-child(1) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    &:last-child {
+      padding: 0 15px;
+    }
+  }
+
+  button {
+    height: 50px;
+    padding: 0 50px;
+  }
 }
