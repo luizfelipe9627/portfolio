@@ -4,6 +4,7 @@ import Button from "../components/Button/Button";
 import InfoItem from "../components/InfoItem/InfoItem";
 import SkillItem from "../components/SkillItem/SkillItem";
 import TimelineItem from "../components/TimelineItem/TimelineItem";
+import Title from "../components/Title/Title";
 
 export default function About() {
   return (
@@ -12,11 +13,7 @@ export default function About() {
       style={{ display: "block", left: "270px" }}
     >
       <div className="container">
-        <div className={styles.row}>
-          <div className="title">
-            <h2>Sobre mim</h2>
-          </div>
-        </div>
+        <Title title="Sobre mim" />
 
         <div className={styles.row}>
           <div className={styles.content}>
@@ -48,7 +45,7 @@ export default function About() {
                 <InfoItem
                   pText="Telefone : "
                   aText="(11) 95235-3969"
-                  aHref="tel:11952353969"
+                  aHref="tel:5511952353969"
                 />
                 <InfoItem
                   pText="LinkedIn : "

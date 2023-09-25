@@ -1,0 +1,14 @@
+.heading {
+  padding: 0 15px;
+  margin-bottom: 40px;
+
+  h2 {
+    color: var(--text-black-900);
+    font-weight: 500;
+  }
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
