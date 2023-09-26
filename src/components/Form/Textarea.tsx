@@ -7,6 +7,7 @@ interface TextareaProps {
   name?: string;
   value?: string;
   onChange?: (event: React.ChangeEvent<HTMLTextAreaElement>) => void;
+  error?: string | null;
 }
 
 export default function Textarea({
@@ -16,6 +17,7 @@ export default function Textarea({
   name,
   value,
   onChange,
+  error,
 }: TextareaProps) {
   return (
     <div className={styles.formItem}>
@@ -30,6 +32,7 @@ export default function Textarea({
           onChange={onChange}
         />
       </div>
+      {error && <p className="error">{error}</p>}
     </div>
   );
 }

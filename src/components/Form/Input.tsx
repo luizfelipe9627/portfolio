@@ -8,6 +8,7 @@ interface InputProps {
   name?: string;
   value?: string;
   onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  error?: string | null;
 }
 
 export default function Input({
@@ -18,6 +19,7 @@ export default function Input({
   required,
   value,
   onChange,
+  error,
 }: InputProps) {
   return (
     <div className={styles.formItem}>
@@ -32,6 +34,7 @@ export default function Input({
           value={value}
           onChange={onChange}
         />
+        {error && <p className="error">{error}</p>}
       </div>
     </div>
   );

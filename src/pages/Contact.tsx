@@ -5,48 +5,66 @@ import Input from "../components/Form/Input";
 import Textarea from "../components/Form/Textarea";
 import Title from "../components/Title/Title";
 import styles from "./Contact.module.scss";
-import emailjs from "@emailjs/browser";
+import useEmail from "../hooks/useEmail";
+import Error from "../helper/Error";
 
 export default function Contact() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
+  
+  const { sendEmail, error } = useEmail();
 
-  function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
+  const [errorEmail, setErrorEmail] = useState<string | null>(null);
+  const [errorName, setErrorName] = useState<string | null>(null);
+  const [errorSubject, setErrorSubject] = useState<string | null>(null);
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
+
+  async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
 
-    const templateParams = {
-      name: name,
-      email: email,
-      subject: subject,
-      message: message,
-    };
+    if (name === "") {
+      setErrorName("O campo nome é obrigatório.");
 
-    emailjs
-      .send(
-        "service_kbmlnav",
-        "template_pu73bpu",
-        templateParams,
-        "8MoajfaFVwn0NMxad",
-      )
-      .then(
-        (response) => {
-          console.log(
-            "Mensagem enviada com sucesso!",
-            response.status,
-            response.text,
-          );
-        },
-        (err) => {
-          console.log("Ocorreu um erro ao enviar a mensagem...", err);
-        },
-      );
+      setTimeout(() => {
+        setErrorName(null);
+      }, 3000);
+      return;
+    }
 
-    setName("");
-    setEmail("");
-    setSubject("");
-    setMessage("");
+    if (email === "") {
+      setErrorEmail("O campo email é obrigatório.");
+      setTimeout(() => {
+        setErrorEmail(null);
+      }, 3000);
+      return;
+    }
+
+    if (subject === "") {
+      setErrorSubject("O campo assunto é obrigatório.");
+      setTimeout(() => {
+        setErrorSubject(null);
+      }, 3000);
+      return;
+    }
+
+    if (message === "") {
+      setErrorMessage("O campo mensagem é obrigatório.");
+      setTimeout(() => {
+        setErrorMessage(null);
+      }, 3000);
+      return;
+    }
+
+    await sendEmail({ name, email, subject, message });
+
+    if (error === null) {
+      setName("");
+      setEmail("");
+      setSubject("");
+      setMessage("");
+    }
   }
 
   return (
@@ -96,7 +114,7 @@ export default function Contact() {
                 name="name"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
-                required
+                error={errorName}
               />
               <Input
                 type="email"
@@ -105,7 +123,7 @@ export default function Contact() {
                 name="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                required
+                error={errorEmail}
               />
             </div>
 
@@ -117,7 +135,7 @@ export default function Contact() {
                 placeholder="Assunto"
                 value={subject}
                 onChange={(e) => setSubject(e.target.value)}
-                required
+                error={errorSubject}
               />
             </div>
 
@@ -128,12 +146,13 @@ export default function Contact() {
                 id="message"
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
-                required
+                error={errorMessage}
               />
             </div>
 
             <div className={styles.row}>
               <Button type="submit">Enviar mensagem</Button>
+              <Error error={error} />
             </div>
           </form>
         </div>

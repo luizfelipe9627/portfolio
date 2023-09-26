@@ -37,3 +37,11 @@ body {
     opacity: initial;
   }
 }
+
+.error {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+  text-align: right;
+  transition: all 0.3s ease;
+}
