@@ -17,6 +17,14 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   row-gap: 30px;
+
+  @media (max-width: 991px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 767px) {
+    grid-template-columns: 1fr;
+  }
 }
 
 .form {
@@ -24,6 +32,10 @@
     &:nth-child(1) {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
+
+      @media (max-width: 767px) {
+        grid-template-columns: 1fr;
+      }
     }
 
     &:last-child {

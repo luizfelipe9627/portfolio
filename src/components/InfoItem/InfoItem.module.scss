@@ -11,6 +11,11 @@
       font-weight: 400;
       color: var(--text-black-700);
       margin-left: 4px;
+
+      @media (max-width: 1199px) {
+        display: block;
+        margin-left: 0;
+      }
     }
 
     a {

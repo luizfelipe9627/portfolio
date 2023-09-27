@@ -2,6 +2,7 @@ import { BrowserRouter } from "react-router-dom";
 import AppRoutes from "../routes";
 import Footer from "./Footer/Footer";
 import Header from "./Header/Header";
+import SwitcherColor from "./SwitcherColor/SwitcherColor";
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       <Header />
       <main className="mainContainer">
         <AppRoutes />
+        <SwitcherColor />
       </main>
       <Footer />
     </BrowserRouter>

@@ -11,6 +11,10 @@
     .info {
       width: 60%;
 
+      @media (max-width: 991px) {
+        width: 100%;
+      }
+
       .hello {
         font-size: 28px;
         margin: 15px 0;
@@ -45,6 +49,10 @@
       display: flex;
       justify-content: center;
       position: relative;
+
+      @media (max-width: 991px) {
+        display: none;
+      }
 
       &::after {
         content: "";

@@ -8,6 +8,12 @@ body {
   padding-left: 270px;
 }
 
+@media (max-width: 1199px) {
+  .mainContainer {
+    padding-left: 0;
+  }
+}
+
 .containerSection {
   display: flex;
   min-height: 100vh;
@@ -44,4 +50,24 @@ body {
   margin-top: 5px;
   text-align: right;
   transition: all 0.3s ease;
+}
+
+.color1 {
+  background-color: #ec1839;
+}
+
+.color2 {
+  background-color: #fa5b0f;
+}
+
+.color3 {
+  background-color: #37b182;
+}
+
+.color4 {
+  background-color: #1854b4;
+}
+
+.color5 {
+  background-color: #f021b2;
 }

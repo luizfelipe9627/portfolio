@@ -24,11 +24,25 @@
 
   .row {
     display: flex;
+
+    @media (max-width: 767px) {
+      display: initial;
+    }
+
     .info {
       width: 60%;
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       max-height: 135px;
+
+      @media (max-width: 767px) {
+        max-height: initial;
+        margin-bottom: 30px;
+      }
+
+      @media (max-width: 991px) {
+        width: 100%;
+      }
 
       .buttons {
         display: flex;
@@ -43,10 +57,18 @@
       width: 40%;
       padding-left: 15px;
 
+      @media (max-width: 767px) {
+        width: initial;
+      }
+
       .row {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         column-gap: 50px;
+
+        @media (max-width: 991px) {
+          grid-template-columns: 1fr;
+        }
       }
     }
   }
@@ -59,6 +81,11 @@
   .experience {
     width: 50%;
     margin-top: 30px;
+
+    @media (max-width: 767px) {
+      width: 100%;
+    }
+
     .title {
       margin: 0 0 30px 0;
       font-size: 24px;
