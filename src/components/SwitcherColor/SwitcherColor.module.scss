@@ -9,6 +9,11 @@
   z-index: 101;
   border-radius: 5px;
   transform: all 0.3s ease;
+  transform: translateX(100%);
+
+  &.open {
+    transform: translateX(-25px);
+  }
 
   .toggler,
   .darkOrLight {
@@ -56,6 +61,7 @@
       width: 30px;
       height: 30px;
       border-radius: 50%;
+      cursor: pointer;
     }
   }
 }
