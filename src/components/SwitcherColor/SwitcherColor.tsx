@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./SwitcherColor.module.scss";
-const THEME_PATH = "./src/styles/themes";
+const THEME_PATH = "../../styles/themes";
 
 const colors = ["color1", "color2", "color3", "color4", "color5"];
 
