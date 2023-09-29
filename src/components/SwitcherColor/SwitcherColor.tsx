@@ -1,6 +1,5 @@
 import React from "react";
 import styles from "./SwitcherColor.module.scss";
-const THEME_PATH = "../../styles/themes";
 
 const colors = ["color1", "color2", "color3", "color4", "color5"];
 
@@ -48,7 +47,7 @@ export default function SwitcherColor() {
     colors.forEach((color) => {
       const link = document.createElement("link");
       link.rel = "stylesheet";
-      link.href = `${THEME_PATH}/${color}.scss`;
+      link.href = `../../../src/styles/themes/${color}.scss`;
       link.title = color;
       link.classList.add("alternate-style");
       link.setAttribute("disabled", "true");
