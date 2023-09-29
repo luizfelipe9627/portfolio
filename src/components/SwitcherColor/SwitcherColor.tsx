@@ -47,7 +47,7 @@ export default function SwitcherColor() {
     colors.forEach((color) => {
       const link = document.createElement("link");
       link.rel = "stylesheet";
-      link.href = `./../src/styles/themes/${color}.scss`;
+      link.href = `./../../styles/themes/${color}.scss`;
       link.title = color;
       link.classList.add("alternate-style");
       link.setAttribute("disabled", "true");
