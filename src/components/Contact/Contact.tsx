@@ -1,12 +1,12 @@
 import { useState } from "react";
-import Button from "../components/Button/Button";
-import ContactItem from "../components/ContactItem/ContactItem";
-import Input from "../components/Form/Input";
-import Textarea from "../components/Form/Textarea";
-import Title from "../components/Title/Title";
+import Button from "../Button/Button";
+import ContactItem from "../ContactItem/ContactItem";
+import Input from "../Form/Input";
+import Textarea from "../Form/Textarea";
+import Title from "../Title/Title";
 import styles from "./Contact.module.scss";
-import useEmail from "../hooks/useEmail";
-import Error from "../helper/Error";
+import useEmail from "../../hooks/useEmail";
+import Error from "../../helper/Error";
 
 export default function Contact() {
   const [name, setName] = useState("");
@@ -68,7 +68,7 @@ export default function Contact() {
   }
 
   return (
-    <section className="containerSection animeLeft">
+    <section className="containerSection animeLeft" id="contact">
       <div className="container">
         <Title title="Contato" />
 

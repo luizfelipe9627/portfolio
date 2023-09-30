@@ -1,5 +1,4 @@
 import styles from "./Logo.module.scss";
-import { Link } from "react-router-dom";
 
 interface LogoDataProps {
   emphasis?: string;
@@ -9,10 +8,10 @@ interface LogoDataProps {
 export default function LogoData({ emphasis, title }: LogoDataProps) {
   return (
     <div className={styles.logo}>
-      <Link to="/">
+      <a href="#logo">
         <span>{emphasis}</span>
         {title}
-      </Link>
+      </a>
     </div>
   );
 }

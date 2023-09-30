@@ -1,9 +1,9 @@
-import Profile from "../components/Profile/Profile";
-import photo from "../assets/img/profile.jpg";
+import Profile from "../Profile/Profile";
+import photo from "../../assets/img/profile.jpg";
 
 export default function Home() {
   return (
-    <section className="containerSection animeLeft" style={{ display: "flex" }}>
+    <section className="containerSection animeLeft" style={{ display: "flex" }} id="home">
       <div className="container">
         <Profile
           presentation="Olá, meu nome é"

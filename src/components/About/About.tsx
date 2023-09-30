@@ -1,16 +1,17 @@
 import styles from "./About.module.scss";
 
-import Button from "../components/Button/Button";
-import InfoItem from "../components/InfoItem/InfoItem";
-import SkillItem from "../components/SkillItem/SkillItem";
-import TimelineItem from "../components/TimelineItem/TimelineItem";
-import Title from "../components/Title/Title";
+import Button from "../Button/Button";
+import InfoItem from "../InfoItem/InfoItem";
+import SkillItem from "../SkillItem/SkillItem";
+import TimelineItem from "../TimelineItem/TimelineItem";
+import Title from "../Title/Title";
 
 export default function About() {
   return (
     <section
       className="containerSection animeLeft"
       style={{ display: "block", left: "270px" }}
+      id="about"
     >
       <div className="container">
         <Title title="Sobre mim" />
@@ -65,7 +66,7 @@ export default function About() {
                   >
                     Baixar CV
                   </Button>
-                  <Button link="contact">Contate-me</Button>
+                  <Button href="contact">Contate-me</Button>
                 </div>
               </div>
 

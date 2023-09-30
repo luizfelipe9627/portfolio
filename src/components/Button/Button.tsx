@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import styles from "./Button.module.scss";
 
 interface ButtonProps {
@@ -18,14 +17,10 @@ export default function Button({
 }: ButtonProps) {
   return (
     <>
-      {link && (
-        <Link to={`/${link}`}>
-          <button className={styles.button}>{children}</button>
-        </Link>
-      )}
+      {link && <button className={styles.button}>{children}</button>}
       {href && (
         <button className={styles.button}>
-          <a href={href} {...props} target="_blank" rel="noopener noreferrer">
+          <a href={`#${href}`} {...props}>
             {children}
           </a>
         </button>

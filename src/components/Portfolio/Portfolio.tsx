@@ -1,17 +1,17 @@
 import styles from "./Portfolio.module.scss";
-import img1 from "../assets/img/portfolio-1.jpg";
-import img2 from "../assets/img/portfolio-2.jpg";
-import img3 from "../assets/img/portfolio-3.jpg";
-import img4 from "../assets/img/portfolio-4.jpg";
-import img5 from "../assets/img/portfolio-5.jpg";
-import img6 from "../assets/img/portfolio-6.jpg";
+import img1 from "../../assets/img/portfolio-1.jpg";
+import img2 from "../../assets/img/portfolio-2.jpg";
+import img3 from "../../assets/img/portfolio-3.jpg";
+import img4 from "../../assets/img/portfolio-4.jpg";
+import img5 from "../../assets/img/portfolio-5.jpg";
+import img6 from "../../assets/img/portfolio-6.jpg";
 
-import PortfolioItem from "../components/PortfolioItem/PortfolioItem";
-import Title from "../components/Title/Title";
+import PortfolioItem from "../PortfolioItem/PortfolioItem";
+import Title from "../Title/Title";
 
 export default function Portfolio() {
   return (
-    <section className="containerSection animeLeft">
+    <section className="containerSection animeLeft" id="portfolio">
       <div className="container">
         <Title title="Portfólio" />
 
