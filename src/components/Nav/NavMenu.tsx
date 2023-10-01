@@ -1,5 +1,5 @@
 import styles from "./NavMenu.module.scss";
-import React, { useState, useEffect } from "react";
+import React from "react";
 
 interface NavMenuProps {
   Title: Array<string>;
@@ -8,8 +8,8 @@ interface NavMenuProps {
 }
 
 export default function NavMenu({ Title, iClass, href }: NavMenuProps) {
-  const [linkActive, setLinkActive] = useState(0);
-  const [linkClicked, setLinkClicked] = useState(false);
+  const [linkActive, setLinkActive] = React.useState(0);
+  const [linkClicked, setLinkClicked] = React.useState(false);
 
   const handleClick = (index: number) => {
     const links = document.querySelectorAll(`.${styles.navMenu} a`);
@@ -19,7 +19,7 @@ export default function NavMenu({ Title, iClass, href }: NavMenuProps) {
     setLinkClicked(true);
   };
 
-  useEffect(() => {
+  React.useEffect(() => {
     const handleScroll = () => {
       if (!linkClicked) {
         const scrollPosition = window.scrollY;
