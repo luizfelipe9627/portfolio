@@ -1,14 +1,11 @@
 import React from "react";
 import styles from "./SwitcherColor.module.scss";
 
-const colors = ["color1", "color2", "color3", "color4", "color5"];
-
 export default function SwitcherColor() {
   const [activeTheme, setActiveTheme] = React.useState("");
 
   const handleColorClick = (color: string) => {
     const spans = document.querySelectorAll(".alternate-style");
-    console.log(spans);
 
     spans.forEach((span) => {
       if (color === span.getAttribute("title")) {
@@ -43,19 +40,6 @@ export default function SwitcherColor() {
   };
 
   React.useEffect(() => {
-    const head = document.querySelector("head") as HTMLElement;
-
-    colors.forEach((color) => {
-      const link = document.createElement("link");
-      link.rel = "stylesheet";
-      link.href = new URL(`../../../src/styles/themes/${color}.scss`, import.meta.url).toString();
-      link.title = color;
-      link.classList.add("alternate-style");
-      link.setAttribute("disabled", "true");
-      head.appendChild(link);
-    });
-
-
     const savedTheme = localStorage.getItem("theme");
     const savedColor = localStorage.getItem("activeColor");
 
