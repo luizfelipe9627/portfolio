@@ -8,6 +8,7 @@ export default function SwitcherColor() {
 
   const handleColorClick = (color: string) => {
     const spans = document.querySelectorAll(".alternate-style");
+    console.log(spans);
 
     spans.forEach((span) => {
       if (color === span.getAttribute("title")) {
@@ -47,12 +48,13 @@ export default function SwitcherColor() {
     colors.forEach((color) => {
       const link = document.createElement("link");
       link.rel = "stylesheet";
-      link.href = `../../../src/styles/themes/${color}.scss`;
+      link.href = new URL(`../../../src/styles/themes/${color}.scss`, import.meta.url).toString();
       link.title = color;
       link.classList.add("alternate-style");
       link.setAttribute("disabled", "true");
       head.appendChild(link);
     });
+
 
     const savedTheme = localStorage.getItem("theme");
     const savedColor = localStorage.getItem("activeColor");

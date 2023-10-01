@@ -17,6 +17,10 @@ export default function NavMenu({ Title, iClass, href }: NavMenuProps) {
 
     setLinkActive(index);
     setLinkClicked(true);
+
+    setTimeout(() => {
+      setLinkClicked(false);
+    }, 2000);
   };
 
   React.useEffect(() => {
