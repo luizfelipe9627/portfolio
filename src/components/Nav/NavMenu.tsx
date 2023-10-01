@@ -1,5 +1,5 @@
 import styles from "./NavMenu.module.scss";
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 interface NavMenuProps {
   Title: Array<string>;
@@ -8,34 +8,46 @@ interface NavMenuProps {
 }
 
 export default function NavMenu({ Title, iClass, href }: NavMenuProps) {
-  const [linkActive, setLinkActive] = React.useState(0);
+  const [linkActive, setLinkActive] = useState(0);
+  const [linkClicked, setLinkClicked] = useState(false);
 
   const handleClick = (index: number) => {
+    const links = document.querySelectorAll(`.${styles.navMenu} a`);
+    links.forEach((link) => link.classList.remove(styles.active));
+
     setLinkActive(index);
+    setLinkClicked(true);
   };
 
-  React.useEffect(() => {
+  useEffect(() => {
     const handleScroll = () => {
-      const scrollPosition = window.scrollY;
+      if (!linkClicked) {
+        const scrollPosition = window.scrollY;
+        const sections = document.querySelectorAll("section");
 
-      const sections = document.querySelectorAll("section");
+        sections.forEach((section, index) => {
+          const offsetTop = section.offsetTop;
+          const offsetBottom = offsetTop + section.offsetHeight;
 
-      sections.forEach((section, index) => {
-        const offsetTop = section.offsetTop;
-        const offsetBottom = offsetTop + section.offsetHeight;
-
-        if (scrollPosition >= offsetTop && scrollPosition < offsetBottom) {
-          setLinkActive(index);
-        }
-      });
+          if (scrollPosition >= offsetTop && scrollPosition < offsetBottom) {
+            if (linkActive !== index) {
+              setLinkActive(index);
+            }
+          }
+        });
+      }
     };
 
-    window.addEventListener("scroll", handleScroll);
+    if (!linkClicked) {
+      window.addEventListener("scroll", handleScroll);
+    } else {
+      window.removeEventListener("scroll", handleScroll);
+    }
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, [linkActive, linkClicked]);
 
   return (
     <nav className={styles.navMenu}>

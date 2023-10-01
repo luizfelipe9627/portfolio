@@ -38,7 +38,7 @@ export default function Profile({
 
           <p>{description}</p>
 
-          <Button link={buttonHref}>{buttonText}</Button>
+          <Button href={buttonHref}>{buttonText}</Button>
         </div>
 
         {photo && (

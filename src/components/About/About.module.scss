@@ -44,11 +44,29 @@
         width: 100%;
       }
 
+      @media (max-width: 544px) {
+        display: flex;
+        flex-direction: column;
+      }
+
       .buttons {
         display: flex;
         margin-top: 30px;
         button {
           margin-right: 15px;
+
+          @media (max-width: 544px) {
+            width: 100%;
+            margin-right: 0;
+
+            &:nth-child(2) {
+              margin-top: 15px;
+            }
+          }
+        }
+
+        @media (max-width: 544px) {
+          flex-wrap: wrap;
         }
       }
     }
