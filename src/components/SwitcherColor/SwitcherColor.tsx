@@ -1,30 +1,55 @@
 import React from "react";
 import styles from "./SwitcherColor.module.scss";
 
+import color1 from "../../styles/themes/color1.module.scss";
+import color2 from "../../styles/themes/color2.module.scss";
+import color3 from "../../styles/themes/color3.module.scss";
+import color4 from "../../styles/themes/color4.module.scss";
+import color5 from "../../styles/themes/color5.module.scss";
+
+type ColorModule = {
+  name: string;
+  default: { color: string };
+};
+
+const colors: ColorModule[] = [
+  { name: "color1", default: { color: color1.color } },
+  { name: "color2", default: { color: color2.color } },
+  { name: "color3", default: { color: color3.color } },
+  { name: "color4", default: { color: color4.color } },
+  { name: "color5", default: { color: color5.color } },
+];
+
 export default function SwitcherColor() {
   const [activeTheme, setActiveTheme] = React.useState("");
 
-  const handleColorClick = (color: string) => {
+  const handleColorClick = (colorModule: ColorModule) => {
     const spans = document.querySelectorAll(".alternate-style");
-
     spans.forEach((span) => {
-      if (color === span.getAttribute("title")) {
+      if (colorModule.name === span.getAttribute("title")) {
         span.removeAttribute("disabled");
       } else {
         span.setAttribute("disabled", "true");
       }
     });
 
-    localStorage.setItem("activeColor", color);
+    document.documentElement.style.setProperty(
+      "--skin-color",
+      colorModule.default.color,
+    );
+    console.log(colorModule.default.color);
+    console.log(colorModule);
+
+    localStorage.setItem("activeColor", colorModule.name);
   };
 
   const showColors = () => {
-    const switcherColor = document.querySelector(
-      `.${styles.switcherColor}`,
-    ) as HTMLElement;
-    switcherColor.classList.toggle(`${styles.open}`);
+    const switcherColor = document.querySelector(`.${styles.switcherColor}`);
 
-    setActiveTheme("active");
+    if (switcherColor) {
+      switcherColor.classList.toggle(`${styles.open}`);
+      setActiveTheme("active");
+    }
   };
 
   const changeTheme = () => {
@@ -50,7 +75,12 @@ export default function SwitcherColor() {
     }
 
     if (savedColor) {
-      handleColorClick(savedColor);
+      handleColorClick({
+        name: savedColor,
+        default: colors.find((color) => color.name === savedColor)?.default || {
+          color: "",
+        },
+      });
     }
   }, []);
 
@@ -68,10 +98,10 @@ export default function SwitcherColor() {
 
       <h4>Tema de cores</h4>
       <div className={styles.colors}>
-        {["color1", "color2", "color3", "color4", "color5"].map((color) => (
+        {colors.map((color, index) => (
           <span
-            key={color}
-            className={color}
+            key={index}
+            className={color.name}
             onClick={() => handleColorClick(color)}
           ></span>
         ))}
