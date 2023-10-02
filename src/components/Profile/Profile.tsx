@@ -1,11 +1,12 @@
 import styles from "./Profile.module.scss";
 import Button from "../Button/Button";
+import ReactTyped from "react-typed";
 
 interface ProfileProps {
   presentation: string;
   name: string;
   profession: string;
-  job: string;
+  jobs: Array<string>;
   description: string;
   buttonText: string;
   buttonHref: string;
@@ -17,7 +18,7 @@ export default function Profile({
   presentation,
   name,
   profession,
-  job,
+  jobs,
   description,
   buttonText,
   buttonHref,
@@ -33,7 +34,15 @@ export default function Profile({
           </h3>
 
           <h3 className={styles.profession}>
-            {profession} <span className={styles.job}>{job}</span>
+            {profession}{" "}
+            <span className={styles.job}>
+              <ReactTyped
+                strings={jobs}
+                typeSpeed={100}
+                backSpeed={60}
+                loop={true}
+              />
+            </span>
           </h3>
 
           <p>{description}</p>
