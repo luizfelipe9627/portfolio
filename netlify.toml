@@ -1,2 +1,10 @@
 [build]
-  command = "npm i --force && npm run dev"
+  command = "npm run prebuild && npm run build"
+  functions = "functions"
+  publish = "dist"
+  
+[build.environment]
+  NODE_VERSION = "14"
+
+[build.lifecycle]
+  prebuild = "npm install --legacy-peer-deps --force"
