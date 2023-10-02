@@ -26,6 +26,7 @@ export default function Portfolio() {
           <PortfolioItem img={img4} alt="Projeto 4" href="" />
           <PortfolioItem img={img5} alt="Projeto 5" href="" />
           <PortfolioItem img={img6} alt="Projeto 6" href="" />
+          <PortfolioItem img={img6} alt="Projeto 6" href="" />
         </div>
       </div>
     </section>

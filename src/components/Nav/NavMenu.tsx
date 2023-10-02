@@ -20,7 +20,7 @@ export default function NavMenu({ Title, iClass, href }: NavMenuProps) {
 
     setTimeout(() => {
       setLinkClicked(false);
-    }, 2000);
+    }, 1000);
   };
 
   React.useEffect(() => {
@@ -43,13 +43,13 @@ export default function NavMenu({ Title, iClass, href }: NavMenuProps) {
     };
 
     if (!linkClicked) {
-      window.addEventListener("scroll", handleScroll);
+      window.addEventListener("wheel", handleScroll);
     } else {
-      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("wheel", handleScroll);
     }
 
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("wheel", handleScroll);
     };
   }, [linkActive, linkClicked]);
 

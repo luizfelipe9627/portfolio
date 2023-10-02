@@ -37,9 +37,7 @@ export default function SwitcherColor() {
       "--skin-color",
       colorModule.default.color,
     );
-    console.log(colorModule.default.color);
-    console.log(colorModule);
-
+    
     localStorage.setItem("activeColor", colorModule.name);
   };
 
