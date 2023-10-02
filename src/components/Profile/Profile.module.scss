@@ -29,12 +29,19 @@
 
       .profession {
         display: flex;
+        flex-wrap: wrap;
         align-items: center;
         font-size: 30px;
-        margin: 15px 0;
 
-        div {
-          margin-left: 10px;
+        p {
+          font-size: 30px;
+          margin: 0 10px 0 0;
+        }
+
+        @media (max-width: 600px) {
+          p {
+            margin-right: 10px;
+          }
         }
 
         .job {
@@ -43,7 +50,7 @@
       }
 
       p {
-        margin-bottom: 70px;
+        margin: 15px 0 70px 0;
         font-size: 20px;
         color: var(--text-black-700);
       }

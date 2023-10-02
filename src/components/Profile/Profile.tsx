@@ -34,8 +34,8 @@ export default function Profile({
           </h3>
 
           <h3 className={styles.profession}>
-            {profession}{" "}
-            
+            <p>{profession}</p>
+
             <span className={styles.job}>
               <Typewriter
                 options={{
