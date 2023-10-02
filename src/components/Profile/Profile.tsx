@@ -1,6 +1,6 @@
 import styles from "./Profile.module.scss";
 import Button from "../Button/Button";
-import ReactTyped from "react-typed";
+import Typewriter from "typewriter-effect";
 
 interface ProfileProps {
   presentation: string;
@@ -35,12 +35,16 @@ export default function Profile({
 
           <h3 className={styles.profession}>
             {profession}{" "}
+            
             <span className={styles.job}>
-              <ReactTyped
-                strings={jobs}
-                typeSpeed={100}
-                backSpeed={60}
-                loop={true}
+              <Typewriter
+                options={{
+                  strings: jobs,
+                  autoStart: true,
+                  loop: true,
+                  delay: 100,
+                  deleteSpeed: 60,
+                }}
               />
             </span>
           </h3>

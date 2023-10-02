@@ -28,8 +28,14 @@
       }
 
       .profession {
+        display: flex;
+        align-items: center;
         font-size: 30px;
         margin: 15px 0;
+
+        div {
+          margin-left: 10px;
+        }
 
         .job {
           color: var(--skin-color);
