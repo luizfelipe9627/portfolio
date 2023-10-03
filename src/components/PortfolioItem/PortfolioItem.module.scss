@@ -10,9 +10,11 @@
     border-radius: 10px;
     overflow: hidden;
     cursor: pointer;
+    transition: all .3s ease;
 
     &:hover {
       box-shadow: 0 0 20px rgba(48, 46, 77, 0.3);
+      transform: scale(1.05);
     }
 
     img {

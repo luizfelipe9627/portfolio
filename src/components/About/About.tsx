@@ -7,6 +7,31 @@ import TimelineItem from "../TimelineItem/TimelineItem";
 import Title from "../Title/Title";
 
 export default function About() {
+  const skills = [
+    { skill: "HTML5", progress: "95%" },
+    { skill: "CSS3", progress: "95%" },
+    { skill: "SASS", progress: "80%" },
+    { skill: "JavaScript", progress: "90%" },
+    { skill: "Git", progress: "80%" },
+    { skill: "Github", progress: "80%" },
+    { skill: "React.JS", progress: "90%" },
+    { skill: "TypeScript", progress: "70%" },
+    { skill: "Figma", progress: "50%" },
+    { skill: "Gulp", progress: "60%" },
+    { skill: "Node.JS", progress: "40%" },
+    { skill: "Java", progress: "30%" },
+    { skill: "C", progress: "30%" },
+    { skill: "Python", progress: "30%" },
+    { skill: "MySQL", progress: "20%" },
+  ];
+
+  skills.sort((a, b) => {
+    const progressA = parseInt(a.progress);
+    const progressB = parseInt(b.progress);
+    console.log(progressA, progressB);
+    return progressB - progressA;
+  });
+
   return (
     <section
       className="containerSection animeLeft"
@@ -21,7 +46,7 @@ export default function About() {
             <div className={styles.row}>
               <div className={styles.text}>
                 <h3>
-                  Eu sou o Luiz Felipe e sou <span>Desenvolvedor Web</span>
+                  Me chamo Luiz Felipe e sou <span>Desenvolvedor</span>
                 </h3>
                 <p>
                   Sou um desenvolvedor web front-end com experiência na criação
@@ -72,14 +97,13 @@ export default function About() {
 
               <div className={styles.skills}>
                 <div className={styles.row}>
-                  <SkillItem skill="HTML5" progress="90%" />
-                  <SkillItem skill="CSS3" progress="90%" />
-                  <SkillItem skill="SASS" progress="80%" />
-                  <SkillItem skill="JavaScript" progress="80%" />
-                  <SkillItem skill="Git" progress="70%" />
-                  <SkillItem skill="Github" progress="80%" />
-                  <SkillItem skill="React.JS" progress="80%" />
-                  <SkillItem skill="TypeScript" progress="70%" />
+                  {skills.map((skill, index) => (
+                    <SkillItem
+                      key={index}
+                      skill={skill.skill}
+                      progress={skill.progress}
+                    />
+                  ))}
                 </div>
               </div>
             </div>

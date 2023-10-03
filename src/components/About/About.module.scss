@@ -50,9 +50,9 @@
       }
 
       .buttons {
-        display: flex;
+        width: max-content;
         margin-top: 30px;
-        button {
+        a {
           margin-right: 15px;
 
           @media (max-width: 544px) {

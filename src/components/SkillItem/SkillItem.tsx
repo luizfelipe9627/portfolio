@@ -8,7 +8,11 @@ interface SkillItemProps {
 export default function SkillItem({ skill, progress }: SkillItemProps) {
   return (
     <div className={styles.skillItem}>
-      <h5>{skill}</h5>
+      <div className={styles.title}>
+        <h5>{skill}</h5>
+        <p className={styles.percentage}>{progress}</p>
+      </div>
+
       <div className={styles.progress}>
         <div
           className={styles.progressIn}
