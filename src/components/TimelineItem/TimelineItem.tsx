@@ -15,7 +15,7 @@ export default function TimelineItem({
 }: TimelineItemProps) {
   return (
     <div className={styles.timelineItem}>
-      <div className={styles.circleDot}></div>
+      <div className={`${styles.circleDot} ${styles.shineEffect}`}></div>
       <h3 className={styles.timelineDate}>
         <i className="fa fa-calendar"></i> {date}
       </h3>

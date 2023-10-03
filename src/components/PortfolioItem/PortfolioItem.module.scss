@@ -10,10 +10,10 @@
     border-radius: 10px;
     overflow: hidden;
     cursor: pointer;
-    transition: all .3s ease;
+    transition: all 0.3s ease;
 
     &:hover {
-      box-shadow: 0 0 20px rgba(48, 46, 77, 0.3);
+      animation: shadowPulse 1s infinite;
       transform: scale(1.05);
     }
 
@@ -23,5 +23,17 @@
       object-fit: cover;
       object-position: top;
     }
+  }
+}
+
+@keyframes shadowPulse {
+  0% {
+    box-shadow: 0 0 40px rgba(48, 46, 77, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 60px rgba(48, 46, 77, 0.7);
+  }
+  100% {
+    box-shadow: 0 0 40px rgba(48, 46, 77, 0.5);
   }
 }
