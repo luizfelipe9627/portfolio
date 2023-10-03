@@ -44,12 +44,10 @@ body.dark {
 .animeLeft {
   transform: translateX(-40px);
   opacity: 0;
-  /* O forwards faz com que a animação permaneça no estado final */
   animation: animeLeft 0.3s forwards;
 }
 
 @keyframes animeLeft {
-  /* Está definindo o estado inicial da animação, ou seja, o estado que o elemento se encontra antes de iniciar a animação. */
   to {
     transform: initial;
     opacity: initial;

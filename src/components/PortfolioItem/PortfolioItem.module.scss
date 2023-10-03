@@ -11,9 +11,9 @@
     overflow: hidden;
     cursor: pointer;
     transition: all 0.3s ease;
+    animation: shadowPulse 1.5s infinite alternate;
 
     &:hover {
-      animation: shadowPulse 1s infinite;
       transform: scale(1.05);
     }
 
@@ -28,12 +28,9 @@
 
 @keyframes shadowPulse {
   0% {
-    box-shadow: 0 0 40px rgba(48, 46, 77, 0.5);
-  }
-  50% {
-    box-shadow: 0 0 60px rgba(48, 46, 77, 0.7);
+    box-shadow: 0 0 20px rgba(48, 46, 77, 0.8);
   }
   100% {
-    box-shadow: 0 0 40px rgba(48, 46, 77, 0.5);
+    box-shadow: 0 0 30px rgba(48, 46, 77, 0.10);
   }
 }

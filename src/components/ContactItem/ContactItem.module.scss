@@ -2,13 +2,7 @@
   padding: 20px;
   text-align: center;
   margin-bottom: 60px;
-
-  &:hover {
-    background-color: var(--bg-black-100);
-    transform: translateY(-5px);
-    transition: all 0.3s ease;
-    border-radius: 10px;
-  }
+  animation: levitate 2s infinite alternate;
 
   .icon {
     i {
@@ -36,6 +30,18 @@
 
     &:hover {
       text-decoration: underline;
+    }
+  }
+
+  @keyframes levitate {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-5px);
+    }
+    100% {
+      transform: translateY(0);
     }
   }
 }

@@ -13,6 +13,19 @@
     text-align: center;
     transition: all 0.3s ease;
     height: 100%;
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      background-color: var(--skin-color);
+      top: 0;
+      animation: outlineAnimation 4s linear infinite;
+      border-radius: 8px;
+    }
 
     .icon {
       height: 60px;
@@ -55,5 +68,23 @@
         }
       }
     }
+  }
+}
+
+@keyframes outlineAnimation {
+  0% {
+    transform: scaleX(0);
+  }
+  25% {
+    transform: scaleX(1);
+  }
+  50% {
+    transform: scaleX(1);
+  }
+  75% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(0);
   }
 }
