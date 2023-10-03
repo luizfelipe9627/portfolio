@@ -52,6 +52,11 @@
       .buttons {
         width: max-content;
         margin-top: 30px;
+
+        @media (max-width: 544px) {
+          width: 100%;
+        }
+
         a {
           margin-right: 15px;
 
