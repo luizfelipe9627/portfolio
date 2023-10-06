@@ -30,6 +30,17 @@ body.dark {
   overflow-x: none;
 }
 
+@media (max-width: 1200px) {
+  .containerSection {
+    display: block;
+    min-height: 100vh;
+    background-color: var(--bg-black-900);
+    color: var(--text-black-900);
+    padding: 0 30px;
+    position: initial;
+  }
+}
+
 .container {
   max-width: 1200px;
   width: 100%;
