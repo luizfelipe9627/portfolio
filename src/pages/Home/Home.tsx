@@ -1,4 +1,4 @@
-import Profile from "../Profile/Profile";
+import Profile from "../../components/Profile/Profile";
 import photo from "../../assets/img/profile.jpg";
 
 export default function Home() {

@@ -1,9 +1,9 @@
 import { useState } from "react";
-import Button from "../Button/Button";
-import ContactItem from "../ContactItem/ContactItem";
-import Input from "../Form/Input";
-import Textarea from "../Form/Textarea";
-import Title from "../Title/Title";
+import Button from "../../components/Button/Button";
+import ContactItem from "../../components/ContactItem/ContactItem";
+import Input from "../../components/Form/Input";
+import Textarea from "../../components/Form/Textarea";
+import Title from "../../components/Title/Title";
 import styles from "./Contact.module.scss";
 import useEmail from "../../hooks/useEmail";
 import Error from "../../helper/Error";
@@ -13,7 +13,7 @@ export default function Contact() {
   const [email, setEmail] = useState("");
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
-  
+
   const { sendEmail, error } = useEmail();
 
   const [errorEmail, setErrorEmail] = useState<string | null>(null);
@@ -68,7 +68,7 @@ export default function Contact() {
   }
 
   return (
-    <section className="containerSection animeLeft" id="contact">
+    <section className="containerSection animeLeft">
       <div className="container">
         <Title title="Contato" />
 

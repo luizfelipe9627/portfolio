@@ -13,7 +13,7 @@
       color: var(--text-black-900);
       padding: 5px 15px;
 
-      &.active {
+      &:global(.active) {
         color: var(--skin-color);
       }
 

@@ -12,12 +12,12 @@ import img10 from "../../assets/img/portfolio-10.jpg";
 import img11 from "../../assets/img/portfolio-11.jpg";
 import img12 from "../../assets/img/portfolio-12.jpg";
 
-import PortfolioItem from "../PortfolioItem/PortfolioItem";
-import Title from "../Title/Title";
+import PortfolioItem from "../../components/PortfolioItem/PortfolioItem";
+import Title from "../../components/Title/Title";
 
 export default function Portfolio() {
   return (
-    <section className="containerSection animeLeft" id="portfolio">
+    <section className="containerSection animeLeft">
       <div className="container">
         <Title title="Portfólio" />
 

@@ -1,14 +1,12 @@
-html {
-  scroll-behavior: smooth;
-}
-
 body {
   font-size: 16px;
   line-height: 1.5;
   font-family: var(--first-font);
+  background-color: #f2f2fc;
 }
 
 body.dark {
+  background-color: #151515;
   --bg-black-900: #151515;
   --bg-black-100: #222222;
   --bg-black-50: #393939;
@@ -16,22 +14,20 @@ body.dark {
   --text-black-700: #e9e9e9;
 }
 
-.mainContainer {
-  padding-left: 270px;
-}
-
-@media (max-width: 1199px) {
-  .mainContainer {
-    padding-left: 0;
-  }
-}
-
 .containerSection {
-  display: flex;
+  display: block;
   min-height: 100vh;
   background-color: var(--bg-black-900);
   color: var(--text-black-900);
   padding: 0 30px;
+  position: fixed;
+  left: 270px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  overflow-y: auto;
+  overflow-x: none;
 }
 
 .container {
@@ -42,15 +38,18 @@ body.dark {
 }
 
 .animeLeft {
-  transform: translateX(-40px);
-  opacity: 0;
-  animation: animeLeft 0.3s forwards;
+  opacity: 1;
+  animation: animeLeft 1s ease;
 }
 
 @keyframes animeLeft {
-  to {
-    transform: initial;
-    opacity: initial;
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
   }
 }
 

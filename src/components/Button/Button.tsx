@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styles from "./Button.module.scss";
 
 interface ButtonProps {
@@ -16,9 +17,9 @@ export default function Button({
   return (
     <>
       {href && (
-        <a href={`#${href}`} {...props} className={styles.button}>
+        <Link to={`/${href}`} {...props} className={styles.button}>
           {children}
-        </a>
+        </Link>
       )}
       {type && (
         <button className={styles.button} type={type}>

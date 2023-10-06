@@ -1,5 +1,6 @@
+import { useState } from "react";
+import { NavLink } from "react-router-dom";
 import styles from "./NavMenu.module.scss";
-import React from "react";
 
 interface NavMenuProps {
   Title: Array<string>;
@@ -8,50 +9,18 @@ interface NavMenuProps {
 }
 
 export default function NavMenu({ Title, iClass, href }: NavMenuProps) {
-  const [linkActive, setLinkActive] = React.useState(0);
-  const [linkClicked, setLinkClicked] = React.useState(false);
+  const [shouldNavigate, setShouldNavigate] = useState(false);
 
-  const handleClick = (index: number) => {
-    const links = document.querySelectorAll(`.${styles.navMenu} a`);
-    links.forEach((link) => link.classList.remove(styles.active));
-
-    setLinkActive(index);
-    setLinkClicked(true);
-
+  const handleNavLinkClick = (item:string) => {
+    setShouldNavigate(true);
     setTimeout(() => {
-      setLinkClicked(false);
-    }, 1000);
+      window.location.href = `/${item}`;
+    }, 2000);
   };
 
-  React.useEffect(() => {
-    const handleScroll = () => {
-      if (!linkClicked) {
-        const scrollPosition = window.scrollY;
-        const sections = document.querySelectorAll("section");
-
-        sections.forEach((section, index) => {
-          const offsetTop = section.offsetTop;
-          const offsetBottom = offsetTop + section.offsetHeight;
-
-          if (scrollPosition >= offsetTop && scrollPosition < offsetBottom) {
-            if (linkActive !== index) {
-              setLinkActive(index);
-            }
-          }
-        });
-      }
-    };
-
-    if (!linkClicked) {
-      window.addEventListener("wheel", handleScroll);
-    } else {
-      window.removeEventListener("wheel", handleScroll);
-    }
-
-    return () => {
-      window.removeEventListener("wheel", handleScroll);
-    };
-  }, [linkActive, linkClicked]);
+  if (shouldNavigate) {
+    return null; // Não renderize o componente enquanto estiver aguardando a navegação
+  }
 
   return (
     <nav className={styles.navMenu}>
@@ -59,14 +28,10 @@ export default function NavMenu({ Title, iClass, href }: NavMenuProps) {
         {href.map((item, index) => {
           return (
             <li key={index}>
-              <a
-                href={`#${item}`}
-                onClick={() => handleClick(index)}
-                className={index === linkActive ? styles.active : ""}
-              >
+              <NavLink to={`/${item}`} onClick={() => handleNavLinkClick(item)}>
                 <i className={`fa fa-${iClass[index]}`}></i>
                 {Title[index]}
-              </a>
+              </NavLink>
             </li>
           );
         })}

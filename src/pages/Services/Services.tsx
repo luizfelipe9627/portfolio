@@ -1,10 +1,10 @@
-import ServiceItem from "../ServiceItem/ServiceItem";
-import Title from "../Title/Title";
+import ServiceItem from "../../components/ServiceItem/ServiceItem";
+import Title from "../../components/Title/Title";
 import styles from "./Services.module.scss";
 
 export default function Services() {
   return (
-    <section className="containerSection animeLeft" id="services">
+    <section className="containerSection animeLeft">
       <div className="container">
         <Title title="Serviços" />
 

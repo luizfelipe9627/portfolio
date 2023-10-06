@@ -1,10 +1,10 @@
 import styles from "./About.module.scss";
 
-import Button from "../Button/Button";
-import InfoItem from "../InfoItem/InfoItem";
-import SkillItem from "../SkillItem/SkillItem";
-import TimelineItem from "../TimelineItem/TimelineItem";
-import Title from "../Title/Title";
+import Button from "../../components/Button/Button";
+import InfoItem from "../../components/InfoItem/InfoItem";
+import SkillItem from "../../components/SkillItem/SkillItem";
+import TimelineItem from "../../components/TimelineItem/TimelineItem";
+import Title from "../../components/Title/Title";
 
 export default function About() {
   const skills = [
@@ -28,7 +28,7 @@ export default function About() {
   skills.sort((a, b) => {
     const progressA = parseInt(a.progress);
     const progressB = parseInt(b.progress);
-    console.log(progressA, progressB);
+
     return progressB - progressA;
   });
 
@@ -36,7 +36,6 @@ export default function About() {
     <section
       className="containerSection animeLeft"
       style={{ display: "block", left: "270px" }}
-      id="about"
     >
       <div className="container">
         <Title title="Sobre mim" />
