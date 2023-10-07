@@ -60,12 +60,6 @@ export default function NavToggle({
     setOpenNav(!openNav);
     setOpenHeader(!openHeader);
     setSection(!section);
-
-    const containerSection = document.querySelector(".containerSection");
-
-    if (containerSection) {
-      containerSection.classList.toggle("active");
-    }
   }
 
   return (

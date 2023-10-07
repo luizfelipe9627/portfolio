@@ -14,10 +14,24 @@ export default function Button({
   type,
   ...props
 }: ButtonProps) {
+  function handleClick() {
+    setTimeout(() => {
+      const containerSection = document.querySelector(".containerSection");
+
+      if (containerSection) {
+        containerSection?.classList.add("active");
+      }
+    }, 100);
+  }
   return (
     <>
       {href && (
-        <Link to={`/${href}`} {...props} className={styles.button}>
+        <Link
+          to={`/${href}`}
+          {...props}
+          className={styles.button}
+          onClick={handleClick}
+        >
           {children}
         </Link>
       )}
