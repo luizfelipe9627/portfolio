@@ -28,16 +28,12 @@ body.dark {
   z-index: 0;
   overflow-y: auto;
   overflow-x: none;
-}
-
-@media (max-width: 1200px) {
-  .containerSection {
-    display: block;
-    min-height: 100vh;
-    background-color: var(--bg-black-900);
-    color: var(--text-black-900);
-    padding: 0 30px;
-    position: initial;
+  transition: all 0.3s ease;
+  
+  @media (max-width: 1200px) {
+    &.active {
+      position: initial;
+    }
   }
 }
 
@@ -90,4 +86,8 @@ body.dark {
 
 .color5 {
   background-color: #f021b2;
+}
+
+header .active {
+  left: initial;
 }

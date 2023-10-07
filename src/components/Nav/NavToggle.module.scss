@@ -4,13 +4,38 @@
   border: 1px solid var(--bg-black-50);
   cursor: pointer;
   position: fixed;
-  left: 300px;
+  left: 45px;
   top: 20px;
   border-radius: 5px;
-  background-color: var(--bg-black-100);
   display: none;
+  background-color: var(--bg-black-100);
   justify-content: center;
   align-items: center;
+  transition: all 0.3s ease;
+
+  @media (max-width: 1200px) {
+    display: flex;
+    position: fixed;
+
+    &.active {
+      display: flex;
+      left: 315px;
+
+      span {
+        height: 0;
+
+        &::before {
+          top: 0;
+          transform: rotate(-45deg);
+        }
+
+        &::after {
+          top: 0;
+          transform: rotate(45deg);
+        }
+      }
+    }
+  }
 
   span {
     width: 18px;
@@ -20,7 +45,7 @@
     position: relative;
 
     &::before {
-      content: '';
+      content: "";
       width: 18px;
       height: 2px;
       background-color: var(--skin-color);
@@ -30,7 +55,7 @@
     }
 
     &::after {
-      content: '';
+      content: "";
       width: 18px;
       height: 2px;
       background-color: var(--skin-color);

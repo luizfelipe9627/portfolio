@@ -2,6 +2,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
+  padding: 0 15px;
 
   @media (max-width: 991px) {
     grid-template-columns: repeat(2, 1fr);

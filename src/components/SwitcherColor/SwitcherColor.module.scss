@@ -12,7 +12,7 @@
   transform: translateX(100%);
 
   &.open {
-    transform: translateX(-25px);
+    transform: translateX(-45px);
   }
 
   .toggler,
@@ -30,6 +30,10 @@
     cursor: pointer;
     transform: all 0.3s ease;
     border-radius: 50%;
+
+    @media (max-width: 1200px) {
+      right: 100%;
+    }
 
     i {
       line-height: 40px;

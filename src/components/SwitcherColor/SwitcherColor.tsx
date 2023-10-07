@@ -37,7 +37,7 @@ export default function SwitcherColor() {
       "--skin-color",
       colorModule.default.color,
     );
-    
+
     localStorage.setItem("activeColor", colorModule.name);
   };
 
@@ -47,6 +47,21 @@ export default function SwitcherColor() {
     if (switcherColor) {
       switcherColor.classList.toggle(`${styles.open}`);
       setActiveTheme("active");
+
+      document.addEventListener("click", handleOutsideClick);
+    }
+  };
+
+  const handleOutsideClick = (event: MouseEvent) => {
+    const switcherColor = document.querySelector(`.${styles.switcherColor}`);
+
+    if (switcherColor && !switcherColor.contains(event.target as Node)) {
+      switcherColor.classList.remove(`${styles.open}`);
+      setActiveTheme("");
+      document.removeEventListener(
+        "click",
+        handleOutsideClick as EventListenerOrEventListenerObject,
+      );
     }
   };
 
