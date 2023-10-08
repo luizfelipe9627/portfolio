@@ -14,7 +14,7 @@
     animation: shadowPulse 1.5s infinite alternate;
 
     &:hover {
-      transform: scale(1.05);
+      transform: scale(1.05) rotate(-3deg);
     }
 
     img {
@@ -31,6 +31,6 @@
     box-shadow: 0 0 20px rgba(48, 46, 77, 0.8);
   }
   100% {
-    box-shadow: 0 0 30px rgba(48, 46, 77, 0.10);
+    box-shadow: 0 0 30px rgba(48, 46, 77, 0.1);
   }
 }

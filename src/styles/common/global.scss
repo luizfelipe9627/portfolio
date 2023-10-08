@@ -104,3 +104,8 @@ body {
     background-color: #f021b2;
   }
 }
+
+:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}

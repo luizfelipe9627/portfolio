@@ -14,13 +14,21 @@
   transition: all 0.3s ease;
 }
 
-@media (max-width: 1199px) {
+@media (max-width: 1200px) {
   .header {
     left: -270px;
 
     &.active {
       left: initial;
       z-index: 999;
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  .header {
+    &.active {
+      width: 100%;
     }
   }
 }

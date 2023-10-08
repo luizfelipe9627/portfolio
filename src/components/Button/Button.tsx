@@ -5,6 +5,7 @@ interface ButtonProps {
   href?: string;
   type?: "button" | "submit" | "reset" | undefined;
   download?: boolean;
+  disabled?: boolean;
   children: React.ReactNode;
 }
 
@@ -12,6 +13,7 @@ export default function Button({
   href,
   children,
   type,
+  disabled,
   ...props
 }: ButtonProps) {
   function handleClick() {
@@ -36,7 +38,7 @@ export default function Button({
         </Link>
       )}
       {type && (
-        <button className={styles.button} type={type}>
+        <button className={styles.button} type={type} disabled={disabled}>
           {children}
         </button>
       )}

@@ -13,13 +13,14 @@ export default function Contact() {
   const [email, setEmail] = useState("");
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
+  const [errorEmail, setErrorEmail] = useState("");
+  const [errorName, setErrorName] = useState("");
+  const [errorSubject, setErrorSubject] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const { sendEmail, error } = useEmail();
 
-  const [errorEmail, setErrorEmail] = useState<string | null>(null);
-  const [errorName, setErrorName] = useState<string | null>(null);
-  const [errorSubject, setErrorSubject] = useState<string | null>(null);
-  const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -28,7 +29,7 @@ export default function Contact() {
       setErrorName("O campo nome é obrigatório.");
 
       setTimeout(() => {
-        setErrorName(null);
+        setErrorName("");
       }, 3000);
       return;
     }
@@ -36,7 +37,7 @@ export default function Contact() {
     if (email === "") {
       setErrorEmail("O campo email é obrigatório.");
       setTimeout(() => {
-        setErrorEmail(null);
+        setErrorEmail("");
       }, 3000);
       return;
     }
@@ -44,7 +45,7 @@ export default function Contact() {
     if (subject === "") {
       setErrorSubject("O campo assunto é obrigatório.");
       setTimeout(() => {
-        setErrorSubject(null);
+        setErrorSubject("");
       }, 3000);
       return;
     }
@@ -52,19 +53,23 @@ export default function Contact() {
     if (message === "") {
       setErrorMessage("O campo mensagem é obrigatório.");
       setTimeout(() => {
-        setErrorMessage(null);
+        setErrorMessage("");
       }, 3000);
       return;
     }
 
+    setLoading(true);
+
     await sendEmail({ name, email, subject, message });
 
-    if (error === null) {
+    if (error === "") {
       setName("");
       setEmail("");
       setSubject("");
       setMessage("");
     }
+
+    setLoading(false);
   }
 
   return (
@@ -151,7 +156,13 @@ export default function Contact() {
             </div>
 
             <div className={styles.row}>
-              <Button type="submit">Enviar mensagem</Button>
+              {loading ? (
+                <Button type="submit" disabled>
+                  Enviando...
+                </Button>
+              ) : (
+                <Button type="submit">Enviar mensagem</Button>
+              )}
               <Error error={error} />
             </div>
           </form>

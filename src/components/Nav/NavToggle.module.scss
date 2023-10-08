@@ -37,6 +37,12 @@
     }
   }
 
+  @media (max-width: 425px) {
+    &.active {
+      left: 80%;
+    }
+  }
+
   span {
     width: 18px;
     height: 2px;
