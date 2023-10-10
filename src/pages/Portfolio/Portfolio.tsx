@@ -1,4 +1,5 @@
 import styles from "./Portfolio.module.scss";
+
 import img1 from "../../assets/img/portfolio-1.jpg";
 import img2 from "../../assets/img/portfolio-2.jpg";
 import img3 from "../../assets/img/portfolio-3.jpg";
@@ -11,6 +12,7 @@ import img9 from "../../assets/img/portfolio-9.jpg";
 import img10 from "../../assets/img/portfolio-10.jpg";
 import img11 from "../../assets/img/portfolio-11.jpg";
 import img12 from "../../assets/img/portfolio-12.jpg";
+import img13 from "../../assets/img/portfolio-13.jpg";
 
 import PortfolioItem from "../../components/PortfolioItem/PortfolioItem";
 import Title from "../../components/Title/Title";
@@ -27,64 +29,83 @@ export default function Portfolio() {
 
         <div className={styles.row}>
           <PortfolioItem
-            img={img1}
+            img={img13}
+            alt="Blogames"
+            href="https://luizfelipe9627-blogames.netlify.app"
+            skill={["React.JS", "Styled Components", "Eslint"]}
+          />
+
+          <PortfolioItem
+            img={img12}
             alt="Naped"
             href="https://luizfelipe9627-naped.netlify.app"
-          />
-          <PortfolioItem
-            img={img2}
-            alt="Dogs"
-            href="https://luizfelipe9627-dogs.netlify.app"
-          />
-          <PortfolioItem
-            img={img3}
-            alt="Ranek"
-            href="https://luizfelipe9627-ranek.netlify.app"
-          />
-          <PortfolioItem
-            img={img4}
-            alt="Steam"
-            href="https://luizfelipe9627-steam-redesign.netlify.app"
-          />
-          <PortfolioItem
-            img={img5}
-            alt="Animais Fantásticos"
-            href="https://luizfelipe9627-animais-fantasticos.netlify.app"
-          />
-          <PortfolioItem
-            img={img6}
-            alt="Calculadora"
-            href="https://luizfelipe9627-calculadora.netlify.app"
-          />
-          <PortfolioItem
-            img={img7}
-            alt="Bikcraft"
-            href="https://luizfelipe9627-bikcraft-2.netlify.app"
-          />
-          <PortfolioItem
-            img={img8}
-            alt="SAC"
-            href="https://luizfelipe9627-simulador-sac.netlify.app"
-          />
-          <PortfolioItem
-            img={img9}
-            alt="Super Mario"
-            href="https://luizfelipe9627-super-mario.netlify.app"
-          />
-          <PortfolioItem
-            img={img10}
-            alt="M3 Academy"
-            href="https://luizfelipe9627-react-e-typescript-m3.netlify.app"
+            skill={["React.JS", "CSS3", "Eslint"]}
           />
           <PortfolioItem
             img={img11}
-            alt="Tourist Attractions"
-            href="https://luizfelipe9627-tourist-attractions-m3.netlify.app"
+            alt="Dogs"
+            href="https://luizfelipe9627-dogs.netlify.app"
+            skill={["React.JS", "CSS3", "API REST", "Eslint"]}
           />
           <PortfolioItem
-            img={img12}
+            img={img10}
+            alt="Ranek"
+            href="https://luizfelipe9627-ranek.netlify.app"
+            skill={["React.JS", "CSS3", "API REST", "Eslint"]}
+          />
+          <PortfolioItem
+            img={img9}
+            alt="Steam"
+            href="https://luizfelipe9627-steam-redesign.netlify.app"
+            skill={["HTML5", "CSS3", "JavaScript", "Webpack", "Eslint"]}
+          />
+          <PortfolioItem
+            img={img8}
+            alt="Animais Fantásticos"
+            href="https://luizfelipe9627-animais-fantasticos.netlify.app"
+            skill={["HTML5", "CSS3", "JavaScript", "Webpack", "Eslint"]}
+          />
+          <PortfolioItem
+            img={img7}
+            alt="Calculadora"
+            href="https://luizfelipe9627-calculadora.netlify.app"
+            skill={["HTML5", "CSS3", "JavaScript", "Webpack", "Eslint"]}
+          />
+          <PortfolioItem
+            img={img6}
+            alt="Bikcraft"
+            href="https://luizfelipe9627-bikcraft-2.netlify.app"
+            skill={["HTML5", "CSS3", "JavaScript"]}
+          />
+          <PortfolioItem
+            img={img5}
+            alt="SAC"
+            href="https://luizfelipe9627-simulador-sac.netlify.app"
+            skill={["HTML5", "CSS3", "JavaScript"]}
+          />
+          <PortfolioItem
+            img={img4}
+            alt="Super Mario"
+            href="https://luizfelipe9627-super-mario.netlify.app"
+            skill={["HTML5", "CSS3", "JavaScript"]}
+          />
+          <PortfolioItem
+            img={img3}
+            alt="M3 Academy"
+            href="https://luizfelipe9627-react-e-typescript-m3.netlify.app"
+            skill={["React.JS", "TypeScript", "SASS", "Eslint"]}
+          />
+          <PortfolioItem
+            img={img2}
+            alt="Tourist Attractions"
+            href="https://luizfelipe9627-tourist-attractions-m3.netlify.app"
+            skill={["HTML5", "SASS", "JavaScript", "Gulp"]}
+          />
+          <PortfolioItem
+            img={img1}
             alt="Riot Games"
-            href="https://luizfelipe9627-login-lol.netlify.app/"
+            href="https://luizfelipe9627-login-lol.netlify.app"
+            skill={["HTML5", "CSS3", "JavaScript"]}
           />
         </div>
       </div>
