@@ -1,5 +1,5 @@
 import Profile from "../../components/Profile/Profile";
-import photo from "../../assets/img/profile.jpg";
+import photo from "../../assets/img/profile.webp";
 
 export default function Home() {
   return (
