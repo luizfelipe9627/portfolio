@@ -39,55 +39,55 @@ export default function Portfolio() {
             img={img12}
             alt="Naped"
             href="https://luizfelipe9627-naped.netlify.app"
-            skill={["React.JS", "CSS3", "Eslint"]}
+            skill={["React.JS", "CSS", "Eslint"]}
           />
           <PortfolioItem
             img={img11}
             alt="Dogs"
             href="https://luizfelipe9627-dogs.netlify.app"
-            skill={["React.JS", "CSS3", "API REST", "Eslint"]}
+            skill={["React.JS", "CSS", "API REST", "Eslint"]}
           />
           <PortfolioItem
             img={img10}
             alt="Ranek"
             href="https://luizfelipe9627-ranek.netlify.app"
-            skill={["React.JS", "CSS3", "API REST", "Eslint"]}
+            skill={["React.JS", "CSS", "API REST", "Eslint"]}
           />
           <PortfolioItem
             img={img9}
             alt="Steam"
             href="https://luizfelipe9627-steam-redesign.netlify.app"
-            skill={["HTML5", "CSS3", "JavaScript", "Webpack", "Eslint"]}
+            skill={["HTML", "CSS", "JavaScript", "Webpack", "Eslint"]}
           />
           <PortfolioItem
             img={img8}
             alt="Animais Fantásticos"
             href="https://luizfelipe9627-animais-fantasticos.netlify.app"
-            skill={["HTML5", "CSS3", "JavaScript", "Webpack", "Eslint"]}
+            skill={["HTML", "CSS", "JavaScript", "Webpack", "Eslint"]}
           />
           <PortfolioItem
             img={img7}
             alt="Calculadora"
             href="https://luizfelipe9627-calculadora.netlify.app"
-            skill={["HTML5", "CSS3", "JavaScript", "Webpack", "Eslint"]}
+            skill={["HTML", "CSS", "JavaScript", "Webpack", "Eslint"]}
           />
           <PortfolioItem
             img={img6}
             alt="Bikcraft"
             href="https://luizfelipe9627-bikcraft-2.netlify.app"
-            skill={["HTML5", "CSS3", "JavaScript"]}
+            skill={["HTML", "CSS", "JavaScript"]}
           />
           <PortfolioItem
             img={img5}
             alt="SAC"
             href="https://luizfelipe9627-simulador-sac.netlify.app"
-            skill={["HTML5", "CSS3", "JavaScript"]}
+            skill={["HTML", "CSS", "JavaScript"]}
           />
           <PortfolioItem
             img={img4}
             alt="Super Mario"
             href="https://luizfelipe9627-super-mario.netlify.app"
-            skill={["HTML5", "CSS3", "JavaScript"]}
+            skill={["HTML", "CSS", "JavaScript"]}
           />
           <PortfolioItem
             img={img3}
@@ -99,13 +99,13 @@ export default function Portfolio() {
             img={img2}
             alt="Tourist Attractions"
             href="https://luizfelipe9627-tourist-attractions-m3.netlify.app"
-            skill={["HTML5", "SASS", "JavaScript", "Gulp"]}
+            skill={["HTML", "SASS", "JavaScript", "Gulp"]}
           />
           <PortfolioItem
             img={img1}
             alt="Riot Games"
             href="https://luizfelipe9627-login-lol.netlify.app"
-            skill={["HTML5", "CSS3", "JavaScript"]}
+            skill={["HTML", "CSS", "JavaScript"]}
           />
         </div>
       </div>
