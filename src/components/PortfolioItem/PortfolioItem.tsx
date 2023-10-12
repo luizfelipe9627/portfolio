@@ -7,6 +7,7 @@ interface PortfolioItemProps {
   alt: string;
   href?: string;
   skill?: Array<string>;
+  icon?: Array<string>;
 }
 
 export default function PortfolioItem({
@@ -14,6 +15,7 @@ export default function PortfolioItem({
   alt,
   href,
   skill,
+  icon,
 }: PortfolioItemProps) {
   const [showSkills, setShowSkills] = React.useState(false);
 
@@ -22,7 +24,7 @@ export default function PortfolioItem({
       <div className={styles.inner}>
         <div className={styles.image}>
           <a href={href} target="_blank" rel="noopener noreferrer">
-            <Overlay title={alt}/>
+            <Overlay title={alt} />
             <img
               src={img}
               alt={alt}
@@ -34,9 +36,19 @@ export default function PortfolioItem({
         {skill && (
           <div
             className={`${styles.skills} ${showSkills ? `${styles.show}` : ""}`}
+            onMouseEnter={() => setShowSkills(true)}
+            onMouseLeave={() => setShowSkills(false)}
           >
             {skill?.map(
-              (item, index) => showSkills && <span key={index}>{item}</span>,
+              (item, index) =>
+                showSkills && (
+                  <div key={index} className={styles.skill}>
+                    {icon && icon[index] && (
+                      <img src={icon[index]} alt={item} />
+                    )}
+                    <span>{item}</span>
+                  </div>
+                ),
             )}
           </div>
         )}

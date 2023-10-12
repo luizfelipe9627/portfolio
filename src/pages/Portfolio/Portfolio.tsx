@@ -14,6 +14,17 @@ import img11 from "../../assets/img/portfolio-11.webp";
 import img12 from "../../assets/img/portfolio-12.webp";
 import img13 from "../../assets/img/portfolio-13.webp";
 
+import html from "../../assets/svg/html.svg";
+import css from "../../assets/svg/css.svg";
+import javascript from "../../assets/svg/javascript.svg";
+import react from "../../assets/svg/react.svg";
+import typescript from "../../assets/svg/typescript.svg";
+import sass from "../../assets/svg/sass.svg";
+import webpack from "../../assets/svg/webpack.svg";
+import gulp from "../../assets/svg/gulp.svg";
+import eslint from "../../assets/svg/eslint.svg";
+import styledComponents from "../../assets/svg/styled-components.svg";
+
 import PortfolioItem from "../../components/PortfolioItem/PortfolioItem";
 import Title from "../../components/Title/Title";
 
@@ -33,6 +44,7 @@ export default function Portfolio() {
             alt="Blogames"
             href="https://luizfelipe9627-blogames.netlify.app"
             skill={["React.JS", "Styled Components", "Eslint"]}
+            icon={[react, styledComponents, eslint]}
           />
 
           <PortfolioItem
@@ -40,72 +52,84 @@ export default function Portfolio() {
             alt="Naped"
             href="https://luizfelipe9627-naped.netlify.app"
             skill={["React.JS", "CSS3", "Eslint"]}
+            icon={[react, css, eslint]}
           />
           <PortfolioItem
             img={img11}
             alt="Dogs"
             href="https://luizfelipe9627-dogs.netlify.app"
-            skill={["React.JS", "CSS3", "API REST", "Eslint"]}
+            skill={["React.JS", "CSS3", "Eslint"]}
+            icon={[react, css, eslint]}
           />
           <PortfolioItem
             img={img10}
             alt="Ranek"
             href="https://luizfelipe9627-ranek.netlify.app"
-            skill={["React.JS", "CSS3", "API REST", "Eslint"]}
+            skill={["React.JS", "CSS3", "Eslint"]}
+            icon={[react, css, eslint]}
           />
           <PortfolioItem
             img={img9}
             alt="Steam"
             href="https://luizfelipe9627-steam-redesign.netlify.app"
             skill={["HTML5", "CSS3", "JavaScript", "Webpack", "Eslint"]}
+            icon={[html, css, javascript, webpack, eslint]}
           />
           <PortfolioItem
             img={img8}
             alt="Animais Fantásticos"
             href="https://luizfelipe9627-animais-fantasticos.netlify.app"
             skill={["HTML5", "CSS3", "JavaScript", "Webpack", "Eslint"]}
+            icon={[html, css, javascript, webpack, eslint]}
           />
           <PortfolioItem
             img={img7}
             alt="Calculadora"
             href="https://luizfelipe9627-calculadora.netlify.app"
             skill={["HTML5", "CSS3", "JavaScript", "Webpack", "Eslint"]}
+            icon={[html, css, javascript, webpack, eslint]}
           />
           <PortfolioItem
             img={img6}
             alt="Bikcraft"
             href="https://luizfelipe9627-bikcraft-2.netlify.app"
             skill={["HTML5", "CSS3", "JavaScript"]}
+            icon={[html, css, javascript]}
           />
           <PortfolioItem
             img={img5}
             alt="SAC"
             href="https://luizfelipe9627-simulador-sac.netlify.app"
             skill={["HTML5", "CSS3", "JavaScript"]}
+            icon={[html, css, javascript]}
           />
           <PortfolioItem
             img={img4}
             alt="Super Mario"
             href="https://luizfelipe9627-super-mario.netlify.app"
             skill={["HTML5", "CSS3", "JavaScript"]}
+            icon={[html, css, javascript]}
           />
           <PortfolioItem
             img={img3}
             alt="M3 Academy"
             href="https://luizfelipe9627-react-e-typescript-m3.netlify.app"
             skill={["React.JS", "TypeScript", "SASS", "Eslint"]}
+            icon={[react, typescript, sass, eslint]}
           />
           <PortfolioItem
             img={img2}
             alt="Tourist Attractions"
             href="https://luizfelipe9627-tourist-attractions-m3.netlify.app"
             skill={["HTML5", "SASS", "JavaScript", "Gulp"]}
+            icon={[html, sass, javascript, gulp]}
           />
           <PortfolioItem
             img={img1}
             alt="Riot Games"
             href="https://luizfelipe9627-login-lol.netlify.app"
             skill={["HTML5", "CSS3", "JavaScript"]}
+            icon={[html, css, javascript]}
           />
         </div>
       </div>
