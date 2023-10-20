@@ -7,7 +7,7 @@
 
 Meu portfólio nomeado como Atlas. Utilizei React, Typescript e SASS, me dando uma ótima oportunidade para aplicar meus conhecimentos adquiridos.
 
-### <a href="https://luizfelipe9627-portfolio.netlify.app">Acesse o portfólio</a>
+### <a href="https://luizfelipe9627.netlify.app">Acesse o portfólio</a>
 
 ## 🎨 Layout
 
