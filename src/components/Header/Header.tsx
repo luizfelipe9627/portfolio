@@ -14,7 +14,7 @@ export default function Header() {
       <Logo emphasis="A" title="tlas" />
       <NavToggle openHeader={openHeader} setOpenHeader={setOpenHeader} />
       <NavMenu
-        Title={["Inicio", "Sobre", "Serviços", "Portfólio", "Contato"]}
+        Title={["Inicio", "Sobre", "Serviços", "Projetos", "Contato"]}
         iClass={["home", "user", "list", "briefcase", "comments"]}
         href={["", "about", "services", "portfolio", "contact"]}
       />

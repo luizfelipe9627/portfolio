@@ -21,7 +21,6 @@ export default function Contact() {
 
   const { sendEmail, error } = useEmail();
 
-
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
 
@@ -107,7 +106,7 @@ export default function Contact() {
         </div>
 
         <h3 className={styles.title}>Me mande um email</h3>
-        <h4 className={styles.subtitle}>Eu respondo muito às mensagens.</h4>
+        <h4 className={styles.subtitle}>Minha resposta costuma ser rápida.</h4>
 
         <div className={styles.row}>
           <form className={styles.form} onSubmit={handleSubmit}>

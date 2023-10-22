@@ -2,7 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import About from "./pages/About/About";
 import Home from "./pages/Home/Home";
 import Services from "./pages/Services/Services";
-import Portfolio from "./pages/Portfolio/Portfolio";
+import Portfolio from "./pages/Projects/Projects";
 import Contact from "./pages/Contact/Contact";
 
 export default function AppRoutes() {

@@ -1,4 +1,4 @@
-import styles from "./Portfolio.module.scss";
+import styles from "./Projects.module.scss";
 
 import img1 from "../../assets/img/portfolio-1.webp";
 import img2 from "../../assets/img/portfolio-2.webp";
@@ -25,21 +25,21 @@ import gulp from "../../assets/svg/gulp.svg";
 import eslint from "../../assets/svg/eslint.svg";
 import styledComponents from "../../assets/svg/styled-components.svg";
 
-import PortfolioItem from "../../components/PortfolioItem/PortfolioItem";
+import ProjectItem from "../../components/ProjectItem/ProjectItem";
 import Title from "../../components/Title/Title";
 
-export default function Portfolio() {
+export default function Projects() {
   return (
     <section className="containerSection animeLeft">
       <div className="container">
-        <Title title="Portfólio" />
+        <Title title="Projetos" />
 
         <div className={styles.heading}>
           <h2>Meus últimos projetos :</h2>
         </div>
 
         <div className={styles.row}>
-          <PortfolioItem
+          <ProjectItem
             img={img13}
             alt="Blogames"
             href="https://luizfelipe9627-blogames.netlify.app"
@@ -47,84 +47,84 @@ export default function Portfolio() {
             icon={[react, styledComponents, eslint]}
           />
 
-          <PortfolioItem
+          <ProjectItem
             img={img12}
             alt="Naped"
             href="https://luizfelipe9627-naped.netlify.app"
             skill={["React.JS", "CSS3", "Eslint"]}
             icon={[react, css, eslint]}
           />
-          <PortfolioItem
+          <ProjectItem
             img={img11}
             alt="Dogs"
             href="https://luizfelipe9627-dogs.netlify.app"
             skill={["React.JS", "CSS3", "Eslint"]}
             icon={[react, css, eslint]}
           />
-          <PortfolioItem
+          <ProjectItem
             img={img10}
             alt="Ranek"
             href="https://luizfelipe9627-ranek.netlify.app"
             skill={["React.JS", "CSS3", "Eslint"]}
             icon={[react, css, eslint]}
           />
-          <PortfolioItem
+          <ProjectItem
             img={img9}
             alt="Steam"
             href="https://luizfelipe9627-steam-redesign.netlify.app"
             skill={["HTML5", "CSS3", "JavaScript", "Webpack", "Eslint"]}
             icon={[html, css, javascript, webpack, eslint]}
           />
-          <PortfolioItem
+          <ProjectItem
             img={img8}
             alt="Animais Fantásticos"
             href="https://luizfelipe9627-animais-fantasticos.netlify.app"
             skill={["HTML5", "CSS3", "JavaScript", "Webpack", "Eslint"]}
             icon={[html, css, javascript, webpack, eslint]}
           />
-          <PortfolioItem
+          <ProjectItem
             img={img7}
             alt="Calculadora"
             href="https://luizfelipe9627-calculadora.netlify.app"
             skill={["HTML5", "CSS3", "JavaScript", "Webpack", "Eslint"]}
             icon={[html, css, javascript, webpack, eslint]}
           />
-          <PortfolioItem
+          <ProjectItem
             img={img6}
             alt="Bikcraft"
             href="https://luizfelipe9627-bikcraft-2.netlify.app"
             skill={["HTML5", "CSS3", "JavaScript"]}
             icon={[html, css, javascript]}
           />
-          <PortfolioItem
+          <ProjectItem
             img={img5}
             alt="SAC"
             href="https://luizfelipe9627-simulador-sac.netlify.app"
             skill={["HTML5", "CSS3", "JavaScript"]}
             icon={[html, css, javascript]}
           />
-          <PortfolioItem
+          <ProjectItem
             img={img4}
             alt="Super Mario"
             href="https://luizfelipe9627-super-mario.netlify.app"
             skill={["HTML5", "CSS3", "JavaScript"]}
             icon={[html, css, javascript]}
           />
-          <PortfolioItem
+          <ProjectItem
             img={img3}
             alt="M3 Academy"
             href="https://luizfelipe9627-react-e-typescript-m3.netlify.app"
             skill={["React.JS", "TypeScript", "SASS", "Eslint"]}
             icon={[react, typescript, sass, eslint]}
           />
-          <PortfolioItem
+          <ProjectItem
             img={img2}
             alt="Tourist Attractions"
             href="https://luizfelipe9627-tourist-attractions-m3.netlify.app"
             skill={["HTML5", "SASS", "JavaScript", "Gulp"]}
             icon={[html, sass, javascript, gulp]}
           />
-          <PortfolioItem
+          <ProjectItem
             img={img1}
             alt="Riot Games"
             href="https://luizfelipe9627-login-lol.netlify.app"

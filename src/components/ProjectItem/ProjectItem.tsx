@@ -1,8 +1,8 @@
 import Overlay from "../Overlay/Overlay";
-import styles from "./PortfolioItem.module.scss";
+import styles from "./ProjectItem.module.scss";
 import React from "react";
 
-interface PortfolioItemProps {
+interface ProjectItemProps {
   img: string;
   alt: string;
   href?: string;
@@ -10,17 +10,17 @@ interface PortfolioItemProps {
   icon?: Array<string>;
 }
 
-export default function PortfolioItem({
+export default function ProjectItem({
   img,
   alt,
   href,
   skill,
   icon,
-}: PortfolioItemProps) {
+}: ProjectItemProps) {
   const [showSkills, setShowSkills] = React.useState(false);
 
   return (
-    <div className={styles.portfolioItem}>
+    <div className={styles.projectItem}>
       <div className={styles.inner}>
         <div className={styles.image}>
           <a href={href} target="_blank" rel="noopener noreferrer">
