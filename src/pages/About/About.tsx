@@ -130,8 +130,8 @@ export default function About() {
                     <TimelineItem
                       date="2022 - Atualmente"
                       title="Estagiário de TI"
-                      subtitle="Colégio Domus Sapiens"
-                      text="Como Estagiário de Tecnologia da Informação no Colégio Domus Sapiens, desempenho papéis essenciais. Auxilio na manutenção de redes e computadores, ofereço suporte técnico a coordenadores, administradores e alunos, e também conduzo a restauração de senhas e e-mails."
+                      subtitle="Colégio Domus Sapientiae"
+                      text="Como Estagiário de Tecnologia da Informação no Colégio Domus Sapientiae, desempenho papéis essenciais. Auxilio na manutenção de redes e computadores, ofereço suporte técnico a coordenadores, administradores e alunos, e também conduzo a restauração de senhas e e-mails."
                     />
                   </div>
                 </div>
