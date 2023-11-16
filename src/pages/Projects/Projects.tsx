@@ -1,18 +1,22 @@
 import styles from "./Projects.module.scss";
 
-import img1 from "../../assets/img/portfolio-1.webp";
-import img2 from "../../assets/img/portfolio-2.webp";
-import img3 from "../../assets/img/portfolio-3.webp";
-import img4 from "../../assets/img/portfolio-4.webp";
-import img5 from "../../assets/img/portfolio-5.webp";
-import img6 from "../../assets/img/portfolio-6.webp";
-import img7 from "../../assets/img/portfolio-7.webp";
-import img8 from "../../assets/img/portfolio-8.webp";
-import img9 from "../../assets/img/portfolio-9.webp";
-import img10 from "../../assets/img/portfolio-10.webp";
-import img11 from "../../assets/img/portfolio-11.webp";
-import img12 from "../../assets/img/portfolio-12.webp";
-import img13 from "../../assets/img/portfolio-13.webp";
+import RiotGames from "../../assets/img/riot-games.webp";
+import TouristAttractions from "../../assets/img/tourist-attractions.webp";
+import M3Academy from "../../assets/img/m3-academy.webp";
+import SuperMario from "../../assets/img/super-mario.webp";
+import SAC from "../../assets/img/sac.webp";
+import Bikcraft2 from "../../assets/img/bikcraft2.webp";
+import Calculadora from "../../assets/img/calculadora.webp";
+import AnimaisFantasticos from "../../assets/img/animais-fantasticos.webp";
+import Steam from "../../assets/img/steam.webp";
+import Ranek from "../../assets/img/ranek.webp";
+import Dogs from "../../assets/img/dogs.webp";
+import Naped from "../../assets/img/naped.webp";
+import Blogames from "../../assets/img/blogames.webp";
+import Calculadora2 from "../../assets/img/calculadora2.webp";
+import FormPesquisa from "../../assets/img/formulario-pesquisa.webp";
+import Dados from "../../assets/img/dados.webp";
+import SlideStories from "../../assets/img/slide-stories.webp";
 
 import html from "../../assets/svg/html.svg";
 import css from "../../assets/svg/css.svg";
@@ -40,92 +44,119 @@ export default function Projects() {
 
         <div className={styles.row}>
           <ProjectItem
-            img={img13}
+            img={SlideStories}
+            alt="Slide Stories"
+            href="https://luizfelipe9627-slide-stories-origamid.netlify.app"
+            skill={["HTML", "CSS", "TypeScript"]}
+            icon={[html, css, typescript]}
+          />
+          <ProjectItem
+            img={Dados}
+            alt="Dados"
+            href="https://luizfelipe9627-dados-origamid.netlify.app"
+            skill={["HTML", "CSS", "TypeScript"]}
+            icon={[html, css, typescript]}
+          />
+          <ProjectItem
+            img={FormPesquisa}
+            alt="Formulário de Pesquisa"
+            href="https://luizfelipe9627-formulario-pesquisa.netlify.app"
+            skill={["HTML", "CSS", "TypeScript"]}
+            icon={[html, css, typescript]}
+          />
+          <ProjectItem
+            img={Calculadora2}
+            alt="Calculadora"
+            href="https://luizfelipe9627-calculadora-vnw.netlify.app"
+            skill={["React.JS", "Styled Components", "Eslint"]}
+            icon={[react, styledComponents, eslint]}
+          />
+          <ProjectItem
+            img={Blogames}
             alt="Blogames"
             href="https://luizfelipe9627-blogames.netlify.app"
             skill={["React.JS", "Styled Components", "Eslint"]}
             icon={[react, styledComponents, eslint]}
           />
-
           <ProjectItem
-            img={img12}
+            img={Naped}
             alt="Naped"
             href="https://luizfelipe9627-naped.netlify.app"
             skill={["React.JS", "CSS3", "Eslint"]}
             icon={[react, css, eslint]}
           />
           <ProjectItem
-            img={img11}
+            img={Dogs}
             alt="Dogs"
             href="https://luizfelipe9627-dogs.netlify.app"
             skill={["React.JS", "CSS3", "Eslint"]}
             icon={[react, css, eslint]}
           />
           <ProjectItem
-            img={img10}
+            img={Ranek}
             alt="Ranek"
             href="https://luizfelipe9627-ranek.netlify.app"
             skill={["React.JS", "CSS3", "Eslint"]}
             icon={[react, css, eslint]}
           />
           <ProjectItem
-            img={img9}
+            img={Steam}
             alt="Steam"
             href="https://luizfelipe9627-steam-redesign.netlify.app"
             skill={["HTML5", "CSS3", "JavaScript", "Webpack", "Eslint"]}
             icon={[html, css, javascript, webpack, eslint]}
           />
           <ProjectItem
-            img={img8}
+            img={AnimaisFantasticos}
             alt="Animais Fantásticos"
             href="https://luizfelipe9627-animais-fantasticos.netlify.app"
             skill={["HTML5", "CSS3", "JavaScript", "Webpack", "Eslint"]}
             icon={[html, css, javascript, webpack, eslint]}
           />
           <ProjectItem
-            img={img7}
+            img={Calculadora}
             alt="Calculadora"
             href="https://luizfelipe9627-calculadora.netlify.app"
             skill={["HTML5", "CSS3", "JavaScript", "Webpack", "Eslint"]}
             icon={[html, css, javascript, webpack, eslint]}
           />
           <ProjectItem
-            img={img6}
+            img={Bikcraft2}
             alt="Bikcraft"
             href="https://luizfelipe9627-bikcraft-2.netlify.app"
             skill={["HTML5", "CSS3", "JavaScript"]}
             icon={[html, css, javascript]}
           />
           <ProjectItem
-            img={img5}
+            img={SAC}
             alt="SAC"
             href="https://luizfelipe9627-simulador-sac.netlify.app"
             skill={["HTML5", "CSS3", "JavaScript"]}
             icon={[html, css, javascript]}
           />
           <ProjectItem
-            img={img4}
+            img={SuperMario}
             alt="Super Mario"
             href="https://luizfelipe9627-super-mario.netlify.app"
             skill={["HTML5", "CSS3", "JavaScript"]}
             icon={[html, css, javascript]}
           />
           <ProjectItem
-            img={img3}
+            img={M3Academy}
             alt="M3 Academy"
             href="https://luizfelipe9627-react-e-typescript-m3.netlify.app"
             skill={["React.JS", "TypeScript", "SASS", "Eslint"]}
             icon={[react, typescript, sass, eslint]}
           />
           <ProjectItem
-            img={img2}
+            img={TouristAttractions}
             alt="Tourist Attractions"
             href="https://luizfelipe9627-tourist-attractions-m3.netlify.app"
             skill={["HTML5", "SASS", "JavaScript", "Gulp"]}
             icon={[html, sass, javascript, gulp]}
           />
           <ProjectItem
-            img={img1}
+            img={RiotGames}
             alt="Riot Games"
             href="https://luizfelipe9627-login-lol.netlify.app"
             skill={["HTML5", "CSS3", "JavaScript"]}
