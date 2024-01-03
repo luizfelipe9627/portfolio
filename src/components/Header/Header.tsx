@@ -16,7 +16,7 @@ export default function Header() {
       <NavMenu
         Title={["Inicio", "Sobre", "Serviços", "Projetos", "Contato"]}
         iClass={["home", "user", "list", "briefcase", "comments"]}
-        href={["", "about", "services", "portfolio", "contact"]}
+        href={["", "about", "services", "projects", "contact"]}
       />
     </header>
   );

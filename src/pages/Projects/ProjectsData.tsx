@@ -1,5 +1,5 @@
 // Adicionar os projetos:
-// Obs.: Ainda está faltando 3 projetos que tem pendências.
+// Obs.: Ainda está ftitleando 3 projetos que tem pendências.
 import Awax from "../../assets/img/awax.webp";
 import Bikcraft from "../../assets/img/bikcraft.webp";
 import CampinhoBlog from "../../assets/img/campinhoblog.webp";
@@ -32,7 +32,7 @@ import UrnaEletronica from "../../assets/img/urna-eletronica.webp";
 import ValidadorForm from "../../assets/img/validador-form.webp";
 import Wildbeast from "../../assets/img/wildbeast.webp";
 import RiotGames from "../../assets/img/riot-games.webp";
-import TouristAttractionsM3 from "../../assets/img/tourist-attractions-m3.webp";
+import TouristAttractions from "../../assets/img/tourist-attractions.webp";
 import M3Academy from "../../assets/img/m3-academy.webp";
 import SuperMario from "../../assets/img/super-mario.webp";
 import SAC from "../../assets/img/sac.webp";
@@ -53,6 +53,9 @@ import Fintech from "../../assets/img/fintech.webp";
 import MyPortfolio from "../../assets/img/my-portfolio.webp";
 import RickAndMorty from "../../assets/img/rick-and-morty.webp";
 import DTMoney from "../../assets/img/dt-money.webp";
+import ShoppingList from "../../assets/img/shopping-list.webp";
+import PokedexStartse from "../../assets/img/pokedex-startse.webp";
+import Medcenter from "../../assets/img/medcenter.webp";
 
 import html from "../../assets/svg/html.svg";
 import css from "../../assets/svg/css.svg";
@@ -70,91 +73,91 @@ import api from "../../assets/svg/api.svg";
 const projects = [
   {
     img: Awax,
-    alt: "Awax",
+    title: "Awax",
     href: "https://luizfelipe9627-awax.netlify.app",
     skill: ["HTML5", "CSS3", "JavaScript"],
     icon: [html, css, javascript],
   },
   {
     img: Bikcraft,
-    alt: "Bikcraft",
+    title: "Bikcraft",
     href: "https://luizfelipe9627-bikcraft.netlify.app",
     skill: ["HTML5", "CSS3"],
     icon: [html, css],
   },
   {
     img: CampinhoBlog,
-    alt: "Campinho Blog",
+    title: "Campinho Blog",
     href: "https://campinhoblog.netlify.app",
     skill: ["React.JS", "Vite.JS", "CSS3", "API Rest"],
     icon: [react, vite, css, api],
   },
   {
     img: CarrosBicicletas,
-    alt: "Carros e Bicicletas",
+    title: "Carros e Bicicletas",
     href: "https://luizfelipe9627-carros-e-bicicletas.netlify.app",
     skill: ["HTML5", "CSS3"],
     icon: [html, css],
   },
   {
     img: Codelandia,
-    alt: "Codelandia",
+    title: "Codelandia",
     href: "https://luizfelipe9627-codelandia.netlify.app",
     skill: ["HTML5", "CSS3"],
     icon: [html, css],
   },
   {
     img: Count,
-    alt: "Count",
+    title: "Count",
     href: "https://luizfelipe9627-count.netlify.app",
     skill: ["React.JS", "Vite.JS", "CSS3"],
     icon: [react, vite, css],
   },
   {
     img: Disney,
-    alt: "Disney",
+    title: "Disney",
     href: "https://luizfelipe9627-disney.netlify.app",
     skill: ["HTML5", "CSS3"],
     icon: [html, css],
   },
   {
     img: Fantastika,
-    alt: "Fantastika",
+    title: "Fantastika",
     href: "https://luizfelipe9627-fantastika.netlify.app",
     skill: ["HTML5", "CSS3"],
     icon: [html, css],
   },
   {
     img: Flexblog,
-    alt: "Flexblog",
+    title: "Flexblog",
     href: "https://luizfelipe9627-flexblog.netlify.app",
     skill: ["HTML5", "CSS3"],
     icon: [html, css],
   },
   {
     img: Freshmanstore,
-    alt: "Freshmanstore",
+    title: "Freshmanstore",
     href: "https://luizfelipe9627-freshmanstore.netlify.app",
     skill: ["HTML5", "CSS3", "JavaScript"],
     icon: [html, css, javascript],
   },
   {
     img: GetCoffee,
-    alt: "GetCoffee",
+    title: "GetCoffee",
     href: "https://luizfelipe9627-getcoffee.netlify.app",
     skill: ["HTML5", "CSS3"],
     icon: [html, css],
   },
   {
     img: Inverno,
-    alt: "Inverno",
+    title: "Inverno",
     href: "https://luizfelipe9627-inverno.netlify.app",
     skill: ["HTML5", "CSS3"],
     icon: [html, css],
   },
   {
     img: Jordanshoes,
-    alt: "Jordanshoes",
+    title: "Jordanshoes",
     href: "https://luizfelipe9627-jordanshoes.netlify.app",
     skill: ["HTML5", "CSS3"],
     icon: [html, css],
@@ -162,126 +165,126 @@ const projects = [
 
   {
     img: LandingPageM3Academy,
-    alt: "Landing Page M3 Academy",
+    title: "Landing Page M3 Academy",
     href: "https://luizfelipe9627-landing-page-m3.netlify.app",
     skill: ["HTML5", "CSS3"],
     icon: [html, css],
   },
   {
     img: ClassLandingPageM3,
-    alt: "Class Landing Page M3",
+    title: "Class Landing Page M3",
     href: "https://luizfelipe9627-class-landing-page-m3.netlify.app",
     skill: ["HTML5", "CSS3"],
     icon: [html, css],
   },
   {
     img: Pizzaria,
-    alt: "Pizzaria",
+    title: "Pizzaria",
     href: "https://luizfelipe9627-pizzaria.netlify.app",
     skill: ["HTML5", "CSS3", "JavaScript"],
     icon: [html, css, javascript],
   },
   {
     img: PlanPage,
-    alt: "Plan Page",
+    title: "Plan Page",
     href: "https://luizfelipe9627-plan-page.netlify.app",
     skill: ["HTML5", "CSS3"],
     icon: [html, css],
   },
   {
     img: PortfolioStartse,
-    alt: "Portfolio Startse",
+    title: "Portfolio Startse",
     href: "https://luizfelipe9627-portfolio-startse.netlify.app",
     skill: ["HTML5", "CSS3"],
     icon: [html, css],
   },
   {
     img: PorfolioOrigamid,
-    alt: "Porfolio Origamid",
+    title: "Porfolio Origamid",
     href: "https://luizfelipe9627-portfolio-origamid.netlify.app",
     skill: ["HTML5", "CSS3"],
     icon: [html, css],
   },
   {
     img: Quiz,
-    alt: "Quiz Origamid",
+    title: "Quiz Origamid",
     href: "https://luizfelipe9627-quiz-origamid.netlify.app",
-    skill: ["HTML5", "CSS3", "JavaScript"],
-    icon: [react, css],
+    skill: ["React.JS", "Vite.JS", "CSS3"],
+    icon: [react, vite, css],
   },
   {
     img: Rocketcoffee,
-    alt: "Rocketcoffee",
+    title: "Rocketcoffee",
     href: "https://luizfelipe9627-rocketcoffee.netlify.app",
     skill: ["HTML5", "CSS3", "JavaScript"],
     icon: [html, css, javascript],
   },
   {
     img: Selfcare,
-    alt: "Selfcare",
+    title: "Selfcare",
     href: "https://luizfelipe9627-selfcare.netlify.app",
     skill: ["HTML5", "CSS3"],
     icon: [html, css],
   },
   {
     img: SlideshowB7Web,
-    alt: "Slideshow B7Web",
+    title: "Slideshow B7Web",
     href: "https://luizfelipe9627-slideshow-b7web.netlify.app",
     skill: ["HTML5", "CSS3", "JavaScript"],
     icon: [html, css, javascript],
   },
   {
     img: SlideShowOrigamid,
-    alt: "Slideshow Origamid",
+    title: "Slideshow Origamid",
     href: "https://luizfelipe9627-slideshow-origamid.netlify.app",
     skill: ["HTML5", "CSS3", "JavaScript"],
     icon: [html, css, javascript],
   },
   {
     img: Starbucks,
-    alt: "Starbucks",
+    title: "Starbucks",
     href: "https://luizfelipe9627-starbucks.netlify.app",
     skill: ["HTML5", "CSS3"],
     icon: [html, css],
   },
   {
     img: Startse,
-    alt: "Startse",
+    title: "Startse",
     href: "https://luizfelipe9627-startse.netlify.app",
     skill: ["HTML5", "CSS3", "JavaScript"],
     icon: [html, css, javascript],
   },
   {
     img: TheWitcher,
-    alt: "The Witcher",
+    title: "The Witcher",
     href: "https://luizfelipe9627-the-witcher.netlify.app",
     skill: ["HTML5", "CSS3"],
     icon: [html, css],
   },
   {
     img: ToDoList,
-    alt: "To Do List",
+    title: "To Do List",
     href: "https://luizfelipe9627-to-do-list.netlify.app",
     skill: ["HTML5", "CSS3", "JavaScript"],
     icon: [html, css, javascript],
   },
   {
     img: UrnaEletronica,
-    alt: "Urna Eletrônica",
+    title: "Urna Eletrônica",
     href: "https://luizfelipe9627-urna-eletronica.netlify.app",
     skill: ["HTML5", "CSS3", "JavaScript"],
     icon: [html, css, javascript],
   },
   {
     img: ValidadorForm,
-    alt: "Validador Form",
+    title: "Validador Form",
     href: "https://luizfelipe9627-validador-form.netlify.app",
     skill: ["HTML5", "CSS3", "JavaScript"],
     icon: [html, css, javascript],
   },
   {
     img: Wildbeast,
-    alt: "Wildbeast",
+    title: "Wildbeast",
     href: "https://luizfelipe9627-wildbeast.netlify.app",
     skill: ["HTML5", "CSS3"],
     icon: [html, css],
@@ -289,165 +292,186 @@ const projects = [
 
   {
     img: RiotGames,
-    alt: "Riot Games",
+    title: "Riot Games",
     href: "https://luizfelipe9627-login-lol.netlify.app",
     skill: ["HTML5", "CSS3"],
     icon: [html, css],
   },
   {
     img: Bikcraft2,
-    alt: "Bikcraft 2",
+    title: "Bikcraft 2",
     href: "https://luizfelipe9627-bikcraft2.netlify.app",
     skill: ["HTML5", "CSS3", "JavaScript"],
     icon: [html, css, javascript],
   },
   {
     img: Calculadora,
-    alt: "Calculadora",
+    title: "Calculadora",
     href: "https://luizfelipe9627-calculadora.netlify.app",
     skill: ["HTML5", "CSS3", "JavaScript", "Webpack", "Eslint"],
     icon: [html, css, javascript, webpack, eslint],
   },
   {
     img: AnimaisFantasticos,
-    alt: "Animais Fantásticos",
+    title: "Animais Fantásticos",
     href: "https://luizfelipe9627-animais-fantasticos.netlify.app",
     skill: ["HTML5", "CSS3", "JavaScript", "Webpack", "Eslint"],
     icon: [html, css, javascript, webpack, eslint],
   },
   {
     img: Steam,
-    alt: "Steam",
+    title: "Steam",
     href: "https://luizfelipe9627-steam-redesign.netlify.app",
     skill: ["HTML5", "CSS3", "JavaScript", "Webpack", "Eslint"],
     icon: [html, css, javascript, webpack, eslint],
   },
   {
     img: Ranek,
-    alt: "Ranek",
+    title: "Ranek",
     href: "https://luizfelipe9627-ranek.netlify.app",
-    skill: ["React.JS", "CSS3", "Eslint", "API Rest"],
-    icon: [react, css, eslint, api],
+    skill: ["React.JS", "Vite.JS", "CSS3", "Eslint", "API Rest"],
+    icon: [react, vite, css, eslint, api],
   },
   {
     img: Dogs,
-    alt: "Dogs",
+    title: "Dogs",
     href: "https://luizfelipe9627-dogs.netlify.app",
-    skill: ["React.JS", "CSS3", "Eslint", "API Rest"],
-    icon: [react, css, eslint, api],
+    skill: ["React.JS", "Vite.JS", "CSS3", "Eslint", "API Rest"],
+    icon: [react, vite, css, eslint, api],
   },
   {
     img: Naped,
-    alt: "Naped",
+    title: "Naped",
     href: "https://luizfelipe9627-naped.netlify.app",
-    skill: ["React.JS", "CSS3", "Eslint"],
-    icon: [react, css, eslint],
+    skill: ["React.JS", "Vite.JS", "CSS3", "Eslint"],
+    icon: [react, vite, css, eslint],
   },
   {
     img: Blogames,
-    alt: "Blogames",
+    title: "Blogames",
     href: "https://luizfelipe9627-blogames.netlify.app",
-    skill: ["React.JS", "Styled Components", "Eslint"],
-    icon: [react, styledComponents, eslint],
+    skill: ["React.JS", "Vite.JS", "Styled Components", "Eslint"],
+    icon: [react, vite, styledComponents, eslint],
   },
   {
     img: CalculadoraRocketseat,
-    alt: "Calculadora Rocketseat",
+    title: "Calculadora Rocketseat",
     href: "https://luizfelipe9627-calculadora-rocketseat.netlify.app",
-    skill: ["React.JS", "Styled Components", "Eslint"],
-    icon: [react, styledComponents, eslint],
+    skill: ["React.JS", "Vite.JS", "Styled Components", "Eslint"],
+    icon: [react, vite, styledComponents, eslint],
   },
   {
     img: FormPesquisa,
-    alt: "Formulário de Pesquisa",
+    title: "Formulário de Pesquisa",
     href: "https://luizfelipe9627-formulario-pesquisa.netlify.app",
     skill: ["HTML", "CSS3", "TypeScript"],
     icon: [html, css, typescript],
   },
   {
     img: Dados,
-    alt: "Dados",
+    title: "Dados",
     href: "https://luizfelipe9627-dados-origamid.netlify.app",
     skill: ["HTML", "CSS3", "TypeScript", "API Rest"],
     icon: [html, css, typescript, api],
   },
   {
     img: SlideStories,
-    alt: "Slide Stories",
+    title: "Slide Stories",
     href: "https://luizfelipe9627-slide-stories-origamid.netlify.app",
     skill: ["HTML", "CSS3", "TypeScript"],
     icon: [html, css, typescript],
   },
   {
-    img: TouristAttractionsM3,
-    alt: "Tourist Attractions M3",
-    href: "https://luizfelipe9627-tourist-attractions-m3.netlify.app",
+    img: TouristAttractions,
+    title: "Tourist Attractions",
+    href: "https://luizfelipe9627-tourist-attractions.netlify.app",
     skill: ["HTML5", "SASS", "JavaScript", "Gulp"],
     icon: [html, sass, javascript, gulp],
   },
   {
     img: M3Academy,
-    alt: "M3 Academy",
+    title: "M3 Academy",
     href: "https://luizfelipe9627-react-e-typescript-m3.netlify.app",
-    skill: ["React.JS", "TypeScript", "SASS", "Eslint"],
-    icon: [react, typescript, sass, eslint],
+    skill: ["React.JS", "Vite.JS", "TypeScript", "SASS", "Eslint"],
+    icon: [react, vite, typescript, sass, eslint],
   },
   {
     img: SuperMario,
-    alt: "Super Mario",
+    title: "Super Mario",
     href: "https://luizfelipe9627-super-mario.netlify.app",
     skill: ["HTML5", "CSS3", "JavaScript"],
     icon: [html, css, javascript],
   },
   {
     img: SAC,
-    alt: "SAC",
+    title: "SAC",
     href: "https://luizfelipe9627-simulador-sac.netlify.app",
     skill: ["HTML5", "CSS3", "JavaScript"],
     icon: [html, css, javascript],
   },
   {
     img: VideoPlayerOrigamid,
-    alt: "Video Player Origamid",
+    title: "Video Player Origamid",
     href: "https://luizfelipe9627-video-player-origamid.netlify.app",
     skill: ["React.JS", "Vite.JS", "CSS3", "Eslint"],
     icon: [react, vite, css, eslint],
   },
   {
     img: MyPortfolio,
-    alt: "My Portfolio",
+    title: "My Portfolio",
     href: "https://luizfelipe9627-my-portfolio.netlify.app",
     skill: ["React.JS", "Vite.JS", "SASS", "Eslint"],
     icon: [react, vite, sass, eslint],
   },
   {
     img: Fintech,
-    alt: "Fintech",
+    title: "Fintech",
     href: "https://luizfelipe9627-fintech.netlify.app",
     skill: ["React.JS", "Vite.JS", "TypeScript", "CSS3", "Eslint", "API Rest"],
     icon: [react, vite, typescript, css, eslint, api],
   },
   {
     img: RickAndMorty,
-    alt: "Rick e Morty",
+    title: "Rick e Morty",
     href: "https://luizfelipe9627-rick-e-morty.netlify.app",
     skill: ["React.JS", "Vite.JS", "TypeScript", "SASS", "Eslint", "API Rest"],
     icon: [react, vite, typescript, sass, eslint, api],
   },
   {
     img: DTMoney,
-    alt: "DT Money",
+    title: "DT Money",
     href: "https://luizfelipe9627-dt-money.netlify.app",
     skill: ["React.JS", "Vite.JS", "TypeScript", "SASS", "Eslint"],
     icon: [react, vite, typescript, sass, eslint],
   },
+  {
+    img: ShoppingList,
+    title: "Shopping List",
+    href: "https://luizfelipe9627-shopping-list.netlify.app",
+    skill: ["HTML5", "JavaScript", "SASS", "Gulp"],
+    icon: [html, javascript, sass, gulp],
+  },
+  {
+    img: PokedexStartse,
+    title: "Pokedex Startse",
+    href: "https://luizfelipe9627-pokedex-startse.netlify.app",
+    skill: ["HTML5", "CSS3", "JavaScript", "API Rest"],
+    icon: [html, css, javascript, api],
+  },
+  {
+    img: Medcenter,
+    title: "Medcenter",
+    href: "https://luizfelipe9627-medcenter.netlify.app",
+    skill: ["HTML5", "CSS3"],
+    icon: [html, css],
+  },
 ];
 
 const projectsSorted = projects.sort((a, b) => {
-  if (a.alt < b.alt) {
+  if (a.title < b.title) {
     return -1;
   }
-  if (a.alt > b.alt) {
+  if (a.title > b.title) {
     return 1;
   }
   return 0;

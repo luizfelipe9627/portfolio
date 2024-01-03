@@ -4,7 +4,7 @@ import React from "react";
 
 interface ProjectItemProps {
   img: string;
-  alt: string;
+  title: string;
   href?: string;
   skill?: Array<string>;
   icon?: Array<string>;
@@ -12,7 +12,7 @@ interface ProjectItemProps {
 
 export default function ProjectItem({
   img,
-  alt,
+  title,
   href,
   skill,
   icon,
@@ -24,10 +24,10 @@ export default function ProjectItem({
       <div className={styles.inner}>
         <div className={styles.image}>
           <a href={href} target="_blank" rel="noopener noreferrer">
-            <Overlay title={alt} />
+            <Overlay title={title} />
             <img
               src={img}
-              alt={alt}
+              title={title}
               onMouseEnter={() => setShowSkills(true)}
               onMouseLeave={() => setShowSkills(false)}
             />
@@ -44,7 +44,7 @@ export default function ProjectItem({
                 showSkills && (
                   <div key={index} className={styles.skill}>
                     {icon && icon[index] && (
-                      <img src={icon[index]} alt={item} />
+                      <img src={icon[index]} title={item} />
                     )}
                     <span>{item}</span>
                   </div>

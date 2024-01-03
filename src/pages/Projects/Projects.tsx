@@ -18,7 +18,7 @@ export default function Projects() {
             <ProjectItem
               key={index}
               img={project.img}
-              alt={project.alt}
+              title={project.title}
               href={project.href}
               skill={project.skill}
               icon={project.icon}
