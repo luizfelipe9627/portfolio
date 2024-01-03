@@ -50,7 +50,7 @@ import Dados from "../../assets/img/dados.webp";
 import SlideStories from "../../assets/img/slide-stories.webp";
 import VideoPlayerOrigamid from "../../assets/img/video-player-origamid.webp";
 import Fintech from "../../assets/img/fintech.webp";
-import MyPortfolio from "../../assets/img/my-portfolio.webp";
+import PortfolioIuricode from "../../assets/img/portfolio-iuricode.webp";
 import RickAndMorty from "../../assets/img/rick-and-morty.webp";
 import DTMoney from "../../assets/img/dt-money.webp";
 import ShoppingList from "../../assets/img/shopping-list.webp";
@@ -417,8 +417,8 @@ const projects = [
     icon: [react, vite, css, eslint],
   },
   {
-    img: MyPortfolio,
-    title: "My Portfolio",
+    img: PortfolioIuricode,
+    title: "Portfolio Iuri Code",
     href: "https://luizfelipe9627-my-portfolio.netlify.app",
     skill: ["React.JS", "Vite.JS", "SASS", "Eslint"],
     icon: [react, vite, sass, eslint],
