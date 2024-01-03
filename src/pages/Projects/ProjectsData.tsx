@@ -419,7 +419,7 @@ const projects = [
   {
     img: PortfolioIuricode,
     title: "Portfolio Iuri Code",
-    href: "https://luizfelipe9627-my-portfolio.netlify.app",
+    href: "https://luizfelipe9627-portfolio-iuricode.netlify.app",
     skill: ["React.JS", "Vite.JS", "SASS", "Eslint"],
     icon: [react, vite, sass, eslint],
   },
