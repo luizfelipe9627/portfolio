@@ -1,5 +1,3 @@
-// Adicionar os projetos:
-// Obs.: Ainda está ftitleando 3 projetos que tem pendências.
 import Awax from "../../assets/img/awax.webp";
 import Bikcraft from "../../assets/img/bikcraft.webp";
 import CampinhoBlog from "../../assets/img/campinhoblog.webp";
