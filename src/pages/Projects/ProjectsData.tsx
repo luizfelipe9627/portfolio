@@ -54,6 +54,7 @@ import DTMoney from "../../assets/img/dt-money.webp";
 import ShoppingList from "../../assets/img/shopping-list.webp";
 import PokedexStartse from "../../assets/img/pokedex-startse.webp";
 import Medcenter from "../../assets/img/medcenter.webp";
+import Wakalery from "../../assets/img/wakalery.webp";
 
 import html from "../../assets/svg/html.svg";
 import css from "../../assets/svg/css.svg";
@@ -67,6 +68,10 @@ import vite from "../../assets/svg/vite.svg";
 import eslint from "../../assets/svg/eslint.svg";
 import styledComponents from "../../assets/svg/styled-components.svg";
 import api from "../../assets/svg/api.svg";
+import node from "../../assets/svg/node.svg";
+import mongodb from "../../assets/svg/mongodb.svg";
+import prisma from "../../assets/svg/prisma.svg";
+import fastify from "../../assets/svg/fastify.svg";
 
 const projects = [
   {
@@ -462,6 +467,35 @@ const projects = [
     href: "https://luizfelipe9627-medcenter.netlify.app",
     skill: ["HTML5", "CSS3"],
     icon: [html, css],
+  },
+  {
+    img: Wakalery,
+    title: "Wakalery",
+    href: "https://luizfelipe9627-wakalery.netlify.app",
+    skill: [
+      "React.JS",
+      "Vite.JS",
+      "TypeScript",
+      "Styled Components",
+      "Eslint",
+      "API Rest",
+      "Node.JS",
+      "MongoDB",
+      "Prisma",
+      "Fastify",
+    ],
+    icon: [
+      react,
+      vite,
+      typescript,
+      styledComponents,
+      eslint,
+      api,
+      node,
+      mongodb,
+      prisma,
+      fastify,
+    ],
   },
 ];
 
