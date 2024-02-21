@@ -23,7 +23,10 @@ export default function About() {
     { skill: "C", progress: "30%" },
     { skill: "Python", progress: "30%" },
     { skill: "MySQL", progress: "20%" },
-    {skill: "Styled Components", progress: "60%"}
+    { skill: "Styled Components", progress: "60%" },
+    { skill: "MongoDB", progress: "40%" },
+    { skill: "Prisma", progress: "20%" },
+    { skill: "Fastify", progress: "20%" },
   ];
 
   skills.sort((a, b) => {
