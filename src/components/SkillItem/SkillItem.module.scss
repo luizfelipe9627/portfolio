@@ -1,78 +1,21 @@
 .skillItem {
-  margin-bottom: 25px;
-
-  .title {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    color: var(--text-black-900);
-    padding-bottom: 16px;
-
-    h5 {
-      font-weight: 600;
-      font-size: 16px;
-      text-transform: capitalize;
-    }
-
-    p {
-      font-weight: 400;
-    }
-  }
-
-  .progress {
-    background-color: var(--bg-black-50);
-    height: 7px;
-    border-radius: 4px;
-    width: 100%;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .progressIn {
-    position: relative;
+  .img {
     width: 100%;
     height: 100%;
-    border-radius: 4px;
-    background-color: var(--skin-color);
-    overflow: hidden;
-    z-index: 1;
+    transition: transform 0.3s;
+    cursor: pointer;
 
-    &::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 50%;
-      height: 100%;
-      background: linear-gradient(
-        90deg,
-        rgba(255, 255, 255, 0.2) 0%,
-        rgba(255, 255, 255, 0.4) 50%,
-        rgba(255, 255, 255, 0.2) 100%
-      );
-      border-radius: 4px;
-      animation: lightMove 6s linear infinite,
-        lightMoveDelayed 6s linear infinite;
-      animation-delay: -6s;
-      z-index: 2;
+    &:hover {
+      animation: rotateImage 0.5s forwards;
     }
   }
-}
 
-@keyframes lightMove {
-  0% {
-    transform: translateX(-100%);
-  }
-  100% {
-    transform: translateX(100%);
-  }
-}
-
-@keyframes lightMoveDelayed {
-  0% {
-    transform: translateX(-100%);
-  }
-  100% {
-    transform: translateX(200%);
+  @keyframes rotateImage {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
   }
 }

@@ -1,28 +1,28 @@
 .title {
   color: var(--skin-color);
   text-align: center;
-  font-size: 25px;
-  margin-bottom: 20px;
+  font-size: 1.5625rem;
+  margin-bottom: 1.25rem;
 }
 
 .subtitle {
   color: var(--text-black-900);
   text-align: center;
-  font-size: 15px;
+  font-size: 0.9375rem;
   text-transform: uppercase;
-  margin-bottom: 60px;
+  margin-bottom: 3.75rem;
 }
 
 .rowContact {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  row-gap: 30px;
+  row-gap: 1.875rem;
 
   @media (max-width: 991px) {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  @media (max-width: 767px) {
+  @media (max-width: 768px) {
     grid-template-columns: 1fr;
   }
 }
@@ -33,13 +33,13 @@
       display: grid;
       grid-template-columns: repeat(2, 1fr);
 
-      @media (max-width: 767px) {
+      @media (max-width: 768px) {
         grid-template-columns: 1fr;
       }
     }
 
     &:last-child {
-      padding: 0 15px;
+      padding: 0 0.9375rem;
     }
   }
 }

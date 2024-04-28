@@ -1,19 +1,21 @@
-import Footer from "./Footer/Footer";
 import Header from "./Header/Header";
 import SwitcherColor from "./SwitcherColor/SwitcherColor";
-import Main from "./Main/Main";
 import { BrowserRouter } from "react-router-dom";
 import AppRoutes from "../router";
+import { ModalContextProvider } from "../context/ModalContext";
+import Modal from "./Modal/Modal";
 
 function App() {
   return (
     <BrowserRouter>
-      <Header />
-      <Main>
-        <AppRoutes />
-        <SwitcherColor />
-      </Main>
-      <Footer />
+      <ModalContextProvider>
+        <Modal />
+        <Header />
+        <main>
+          <AppRoutes />
+          <SwitcherColor />
+        </main>
+      </ModalContextProvider>
     </BrowserRouter>
   );
 }

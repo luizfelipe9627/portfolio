@@ -6,40 +6,86 @@ import SkillItem from "../../components/SkillItem/SkillItem";
 import TimelineItem from "../../components/TimelineItem/TimelineItem";
 import Title from "../../components/Title/Title";
 
+import {
+  css,
+  html,
+  javascript,
+  react,
+  redux,
+  styledcomponents,
+  tailwindcss,
+  typescript,
+  vite,
+  sass,
+  gulp,
+  figma,
+  node,
+  mysql,
+  mongodb,
+  prisma,
+  fastify,
+  webpack,
+  express,
+  docker,
+  git,
+  github,
+} from "../../utils/icons";
+
 export default function About() {
   const skills = [
-    { skill: "HTML5", progress: "95%" },
-    { skill: "CSS3", progress: "95%" },
-    { skill: "SASS", progress: "80%" },
-    { skill: "JavaScript", progress: "90%" },
-    { skill: "Git", progress: "80%" },
-    { skill: "Github", progress: "80%" },
-    { skill: "React.JS", progress: "90%" },
-    { skill: "TypeScript", progress: "70%" },
-    { skill: "Figma", progress: "50%" },
-    { skill: "Gulp", progress: "60%" },
-    { skill: "Node.JS", progress: "40%" },
-    { skill: "Java", progress: "30%" },
-    { skill: "C", progress: "30%" },
-    { skill: "Python", progress: "30%" },
-    { skill: "MySQL", progress: "20%" },
-    { skill: "Styled Components", progress: "60%" },
-    { skill: "MongoDB", progress: "40%" },
-    { skill: "Prisma", progress: "20%" },
-    { skill: "Fastify", progress: "20%" },
+    {
+      skill: "HTML",
+      icon: html,
+      href: "https://developer.mozilla.org/pt-BR/docs/Web/HTML",
+    },
+    {
+      skill: "CSS",
+      icon: css,
+      href: "https://developer.mozilla.org/pt-BR/docs/Web/CSS",
+    },
+    { skill: "SASS", icon: sass, href: "https://sass-lang.com/" },
+    {
+      skill: "JavaScript",
+      icon: javascript,
+      href: "https://developer.mozilla.org/pt-BR/docs/Web/JavaScript",
+    },
+    { skill: "Gulp", icon: gulp, href: "https://gulpjs.com/" },
+    { skill: "Webpack", icon: webpack, href: "https://webpack.js.org/" },
+    { skill: "React.js", icon: react, href: "https://reactjs.org/" },
+    { skill: "Vite", icon: vite, href: "https://vitejs.dev/" },
+    {
+      skill: "Styled Components",
+      icon: styledcomponents,
+      href: "https://styled-components.com/",
+    },
+    {
+      skill: "TypeScript",
+      icon: typescript,
+      href: "https://www.typescriptlang.org/",
+    },
+    { skill: "Redux", icon: redux, href: "https://redux.js.org/" },
+
+    {
+      skill: "Tailwind CSS",
+      icon: tailwindcss,
+      href: "https://tailwindcss.com/",
+    },
+    { skill: "Figma", icon: figma, href: "https://www.figma.com/" },
+    { skill: "Node.js", icon: node, href: "https://nodejs.org/en/" },
+    { skill: "Express.js", icon: express, href: "https://expressjs.com/" },
+    { skill: "MongoDB", icon: mongodb, href: "https://www.mongodb.com/" },
+    { skill: "MySQL", icon: mysql, href: "https://www.mysql.com/" },
+    { skill: "Prisma", icon: prisma, href: "https://www.prisma.io/" },
+    { skill: "Fastify", icon: fastify, href: "https://www.fastify.io/" },
+    { skill: "Docker", icon: docker, href: "https://www.docker.com/" },
+    { skill: "Git", icon: git, href: "https://git-scm.com/" },
+    { skill: "GitHub", icon: github, href: "https://github.com/" },
   ];
-
-  skills.sort((a, b) => {
-    const progressA = parseInt(a.progress);
-    const progressB = parseInt(b.progress);
-
-    return progressB - progressA;
-  });
 
   return (
     <section
       className="containerSection animeLeft"
-      style={{ display: "block", left: "270px" }}
+      style={{ display: "block", left: "16.875rem" }}
     >
       <div className="container">
         <Title title="Sobre mim" />
@@ -49,15 +95,14 @@ export default function About() {
             <div className={styles.row}>
               <div className={styles.text}>
                 <h3>
-                  Me chamo Luiz Felipe e sou <span>Desenvolvedor</span>
+                  Me chamo Luiz Felipe e sou <span>Desenvolvedor Web</span>
                 </h3>
                 <p>
-                  Sou um desenvolvedor web front-end com experiência na criação
-                  de interfaces de usuário atraentes e funcionais. Ao longo dos
-                  anos, adquiri habilidades sólidas em tecnologias atuais. Estou
-                  sempre buscando aprender e implementar as melhores práticas no
-                  desenvolvimento web para criar experiências de usuário
-                  excepcionais.
+                  Sou um Desenvolvedor FullStack, apaixonado por tecnologia e
+                  programação. Atualmente, estou no meu último ano Análise e
+                  Desenvolvimento de Sistemas. Estou sempre em busca de novos
+                  desafios e oportunidades para aprimorar minhas habilidades e
+                  conhecimentos.
                 </p>
               </div>
             </div>
@@ -104,7 +149,8 @@ export default function About() {
                     <SkillItem
                       key={index}
                       skill={skill.skill}
-                      progress={skill.progress}
+                      icon={skill.icon}
+                      href={skill.href}
                     />
                   ))}
                 </div>
@@ -131,7 +177,7 @@ export default function About() {
                 <div className={styles.row}>
                   <div className={styles.timeline}>
                     <TimelineItem
-                      date="2022 - Atualmente"
+                      date="2022 - 2024"
                       title="Estagiário de TI"
                       subtitle="Colégio Domus Sapientiae"
                       text="Como Estagiário de Tecnologia da Informação no Colégio Domus Sapientiae, desempenho papéis essenciais. Auxilio na manutenção de redes e computadores, ofereço suporte técnico a coordenadores, administradores e alunos, e também conduzo a restauração de senhas e e-mails."
