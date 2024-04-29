@@ -1,14 +1,14 @@
 .timelineItem {
   position: relative;
-  padding: 0 0 50px 37px;
+  padding: 0 0 3.125rem 2.3125rem;
 
   &::before {
     content: "";
-    width: 1px;
+    width: 0.0625rem;
     position: absolute;
     height: 100%;
-    left: 7px;
-    top: 5px;
+    left: 0.4375rem;
+    top: 0.3125rem;
     background-color: var(--skin-color);
   }
 
@@ -19,46 +19,46 @@
   &::before,
   .circleDot {
     z-index: 1;
-    box-shadow: 0 0 10px 1px var(--skin-color);
+    box-shadow: 0 0 0.625rem 0.0625rem var(--skin-color);
   }
 
   .circleDot {
-    width: 15px;
-    height: 15px;
+    width: 0.9375rem;
+    height: 0.9375rem;
     border-radius: 50%;
     background-color: var(--skin-color);
     position: absolute;
-    top: 3px;
+    top: 0.1875rem;
     left: 0;
   }
 
   .timelineDate {
-    font-size: 14px;
+    font-size: 0.875rem;
     font-weight: 400;
-    margin-bottom: 12px;
+    margin-bottom: 0.75rem;
     color: var(--text-black-700);
 
     i {
-      margin-right: 5px;
+      margin-right: 0.3125rem;
     }
   }
 
   .timelineTitle {
-    font-size: 18px;
+    font-size: 1.125rem;
     font-weight: 700;
     color: var(--text-black-900);
   }
 
   .timelineSubtitle {
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 600;
-    margin-bottom: 15px;
+    margin-bottom: 0.9375rem;
     color: var(--text-black-700);
   }
 
   .timelineText {
-    font-size: 16px;
-    line-height: 25px;
+    font-size: 1rem;
+    line-height: 1.5625rem;
     color: var(--text-black-700);
   }
 }

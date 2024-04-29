@@ -1,24 +1,24 @@
 .logo {
   position: absolute;
-  top: 50px;
-  font-size: 30px;
+  top: 3.125rem;
+  font-size: 1.875rem;
   text-transform: capitalize;
 
   a {
     color: var(--text-black-900);
     font-weight: 600;
-    padding: 15px 20px;
-    font-size: 30px;
-    letter-spacing: 5px;
+    padding: 0.9375rem 1.25rem;
+    font-size: 1.875rem;
+    letter-spacing: 0.3125rem;
     position: relative;
 
     &::before {
       content: "";
       position: absolute;
-      width: 20px;
-      height: 20px;
-      border-bottom: 5px solid var(--skin-color);
-      border-left: 5px solid var(--skin-color);
+      width: 1.25rem;
+      height: 1.25rem;
+      border-bottom: 0.3125rem solid var(--skin-color);
+      border-left: 0.3125rem solid var(--skin-color);
       bottom: 0;
       left: 0;
     }
@@ -26,10 +26,10 @@
     &::after {
       content: "";
       position: absolute;
-      width: 20px;
-      height: 20px;
-      border-top: 5px solid var(--skin-color);
-      border-right: 5px solid var(--skin-color);
+      width: 1.25rem;
+      height: 1.25rem;
+      border-top: 0.3125rem solid var(--skin-color);
+      border-right: 0.3125rem solid var(--skin-color);
       top: 0;
       right: 0;
     }
@@ -37,6 +37,6 @@
 
   span {
     font-family: var(--second-font);
-    font-size: 40px;
+    font-size: 2.5rem;
   }
 }

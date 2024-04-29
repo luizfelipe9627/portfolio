@@ -1,17 +1,17 @@
 .title {
   width: 100%;
-  margin: 0 15px 60px 15px;
+  margin: 0 0.9375rem 3.75rem 0.9375rem;
 
   h2 {
-    font-size: 40px;
+    font-size: 2.5rem;
     color: var(--text-black-900);
     font-weight: 700;
     position: relative;
 
     &::before {
       content: "";
-      height: 4px;
-      width: 50px;
+      height: 0.25rem;
+      width: 3.125rem;
       background-color: var(--skin-color);
       position: absolute;
       top: 100%;
@@ -20,13 +20,13 @@
 
     &::after {
       content: "";
-      height: 4px;
-      width: 25px;
+      height: 0.25rem;
+      width: 1.5625rem;
       background-color: var(--skin-color);
       position: absolute;
       top: 100%;
       left: 0;
-      margin-top: 8px;
+      margin-top: 0.5rem;
     }
   }
 }

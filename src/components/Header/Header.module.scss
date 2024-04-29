@@ -1,13 +1,13 @@
 .header {
   background-color: var(--bg-black-100);
-  width: 270px;
+  width: 16.875rem;
   position: fixed;
   left: 0;
   top: 0;
-  padding: 30px;
+  padding: 1.875rem;
   height: 100%;
   z-index: 100;
-  border-right: 1px solid var(--bg-black-50);
+  border-right: 0.0625rem solid var(--bg-black-50);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -16,7 +16,7 @@
 
 @media (max-width: 1200px) {
   .header {
-    left: -270px;
+    left: -16.875rem;
 
     &.active {
       left: initial;
@@ -25,7 +25,7 @@
   }
 }
 
-@media (max-width: 425px) {
+@media (max-width: 426px) {
   .header {
     &.active {
       width: 100%;

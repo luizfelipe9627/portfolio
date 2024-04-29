@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React from "react";
 import Button from "../../components/Button/Button";
 import ContactItem from "../../components/ContactItem/ContactItem";
 import Input from "../../components/Form/Input";
@@ -7,68 +7,105 @@ import Title from "../../components/Title/Title";
 import styles from "./Contact.module.scss";
 import useEmail from "../../hooks/useEmail";
 import Error from "../../helper/Error";
+import {
+  validateInputChange,
+  validateInputValue,
+} from "../../schema/validateForm";
+import {
+  nameSchema,
+  emailSchema,
+  subjectSchema,
+  messageSchema,
+} from "../../schema/schemaForm";
+import Success from "../../helper/Success";
 
 export default function Contact() {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [subject, setSubject] = useState("");
-  const [message, setMessage] = useState("");
-  const [errorEmail, setErrorEmail] = useState("");
-  const [errorName, setErrorName] = useState("");
-  const [errorSubject, setErrorSubject] = useState("");
-  const [errorMessage, setErrorMessage] = useState("");
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = React.useState(false);
+  const [formData, setFormData] = React.useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
+  const [formErrors, setFormErrors] = React.useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
 
-  const { sendEmail, error } = useEmail();
+  const { sendEmail, success, error } = useEmail();
+
+  const handleInputChange = (typeInput: string, value: string) => {
+    validateInputChange({
+      schema:
+        typeInput === "name"
+          ? nameSchema
+          : typeInput === "email"
+          ? emailSchema
+          : typeInput === "subject"
+          ? subjectSchema
+          : messageSchema,
+      setInput: (value) => {
+        setFormData({ ...formData, [typeInput]: value });
+      },
+      setError: (error) => {
+        setFormErrors({ ...formErrors, [typeInput]: error });
+      },
+    })(value);
+  };
 
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
 
-    if (name === "") {
-      setErrorName("O campo nome é obrigatório.");
+    const isNameValid = validateInputValue({
+      input: formData.name,
+      schema: nameSchema,
+      setError: (error) => {
+        setFormErrors({ ...formErrors, name: error });
+      },
+    });
 
-      setTimeout(() => {
-        setErrorName("");
-      }, 3000);
-      return;
+    const isEmailValid = validateInputValue({
+      input: formData.email,
+      schema: emailSchema,
+      setError: (error) => {
+        setFormErrors((prevErrors) => ({ ...prevErrors, email: error }));
+      },
+    });
+
+    const isSubjectValid = validateInputValue({
+      input: formData.subject,
+      schema: subjectSchema,
+      setError: (error) => {
+        setFormErrors((prevErrors) => ({ ...prevErrors, subject: error }));
+      },
+    });
+
+    const isMessageValid = validateInputValue({
+      input: formData.message,
+      schema: messageSchema,
+      setError: (error) => {
+        setFormErrors((prevErrors) => ({ ...prevErrors, message: error }));
+      },
+    });
+
+    if (isNameValid && isEmailValid && isSubjectValid && isMessageValid) {
+      setLoading(true);
+
+      const emailResponse = await sendEmail({ formData });
+
+      if (emailResponse) {
+        setFormData({
+          name: "",
+          email: "",
+          subject: "",
+          message: "",
+        });
+      }
+
+      setLoading(false);
     }
-
-    if (email === "") {
-      setErrorEmail("O campo email é obrigatório.");
-      setTimeout(() => {
-        setErrorEmail("");
-      }, 3000);
-      return;
-    }
-
-    if (subject === "") {
-      setErrorSubject("O campo assunto é obrigatório.");
-      setTimeout(() => {
-        setErrorSubject("");
-      }, 3000);
-      return;
-    }
-
-    if (message === "") {
-      setErrorMessage("O campo mensagem é obrigatório.");
-      setTimeout(() => {
-        setErrorMessage("");
-      }, 3000);
-      return;
-    }
-
-    setLoading(true);
-
-    await sendEmail({ name, email, subject, message });
-
-    if (error === "") {
-      setName("");
-      setEmail("");
-      setSubject("");
-      setMessage("");
-    }
-
-    setLoading(false);
   }
 
   return (
@@ -116,18 +153,22 @@ export default function Contact() {
                 placeholder="Nome"
                 id="name"
                 name="name"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-                error={errorName}
+                value={formData.name}
+                onChange={({ target }) =>
+                  handleInputChange("name", target.value)
+                }
+                error={formErrors.name}
               />
               <Input
                 type="email"
                 placeholder="Email"
                 id="email"
                 name="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                error={errorEmail}
+                value={formData.email}
+                onChange={({ target }) =>
+                  handleInputChange("email", target.value)
+                }
+                error={formErrors.email}
               />
             </div>
 
@@ -137,9 +178,11 @@ export default function Contact() {
                 id="subject"
                 name="subject"
                 placeholder="Assunto"
-                value={subject}
-                onChange={(e) => setSubject(e.target.value)}
-                error={errorSubject}
+                value={formData.subject}
+                onChange={({ target }) =>
+                  handleInputChange("subject", target.value)
+                }
+                error={formErrors.subject}
               />
             </div>
 
@@ -148,9 +191,11 @@ export default function Contact() {
                 placeholder="Mensagem"
                 name="message"
                 id="message"
-                value={message}
-                onChange={(e) => setMessage(e.target.value)}
-                error={errorMessage}
+                value={formData.message}
+                onChange={({ target }) =>
+                  handleInputChange("message", target.value)
+                }
+                error={formErrors.message}
               />
             </div>
 
@@ -162,7 +207,8 @@ export default function Contact() {
               ) : (
                 <Button type="submit">Enviar mensagem</Button>
               )}
-              <Error error={error} />
+              {error && <Error error={error} />}
+              {success && <Success success={success} />}
             </div>
           </form>
         </div>

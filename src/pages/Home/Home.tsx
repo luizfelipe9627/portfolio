@@ -3,18 +3,17 @@ import photo from "../../assets/img/profile.webp";
 
 export default function Home() {
   return (
-    <section
-      className="containerSection animeLeft"
-      style={{ display: "flex" }}
-      id="home"
-    >
-      <div className="container">
+    <section className="containerSection animeLeft" id="home">
+      <div
+        className="container"
+        style={{ display: "flex", justifyContent: "center" }}
+      >
         <Profile
           presentation="Olá, meu nome é"
           name="Luiz Felipe"
           profession="Sou um"
-          jobs={["Desenvolvedor Web", "Desenvolvedor Front-end"]}
-          description=" Tenho dedicado os últimos dois anos ao estudo e prática em desenvolvimento web front-end. Possuo especialização na criação de landing pages funcionais, utilizando as tecnologias mais atualizadas disponíveis no mercado."
+          jobs={["Desenvolvedor FullStack", "Desenvolvedor Web"]}
+          description=" Tenho dedicado os últimos dois anos ao estudo e prática em desenvolvimento web. Possuo especialização em tecnologias front-end e back-end, com foco em React.JS e Node.JS. Estou sempre buscando aprender e implementar as melhores práticas no desenvolvimento web para criar experiências de usuário excepcionais."
           buttonHref="contact"
           buttonText="Entrar em contato"
           photo={photo}

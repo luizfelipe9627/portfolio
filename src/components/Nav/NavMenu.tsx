@@ -2,12 +2,12 @@ import { NavLink } from "react-router-dom";
 import styles from "./NavMenu.module.scss";
 
 interface NavMenuProps {
-  Title: Array<string>;
+  title: Array<string>;
   iClass: Array<string>;
   href: Array<string>;
 }
 
-export default function NavMenu({ Title, iClass, href }: NavMenuProps) {
+export default function NavMenu({ title, iClass, href }: NavMenuProps) {
   return (
     <nav className={styles.navMenu}>
       <ul>
@@ -16,7 +16,7 @@ export default function NavMenu({ Title, iClass, href }: NavMenuProps) {
             <li key={index}>
               <NavLink to={`/${item}`}>
                 <i className={`fa fa-${iClass[index]}`}></i>
-                {Title[index]}
+                {title[index]}
               </NavLink>
             </li>
           );
