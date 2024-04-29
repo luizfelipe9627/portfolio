@@ -1,10 +1,10 @@
 body {
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 1.5;
   font-family: var(--first-font);
 
   ::-webkit-scrollbar {
-    width: 10px;
+    width: 0.625rem;
   }
 
   ::-webkit-scrollbar-track {
@@ -13,7 +13,7 @@ body {
 
   ::-webkit-scrollbar-thumb {
     background-color: var(--skin-color);
-    border-radius: 4px;
+    border-radius: 0.25rem;
   }
 
   &.dark {
@@ -30,15 +30,14 @@ body {
   }
 
   .containerSection {
-    display: block;
+    display: flex;
     min-height: 100vh;
     background-color: var(--bg-black-900);
     color: var(--text-black-900);
-    padding: 0 30px;
+    padding: 0 1.875rem;
     position: fixed;
-    left: 270px;
+    left: 16.875rem;
     top: 0;
-    right: 0;
     bottom: 0;
     z-index: 0;
     overflow-y: auto;
@@ -52,10 +51,21 @@ body {
     }
   }
 
+  .error {
+    text-align: end;
+    color: #f31;
+    font-size: 0.875rem;
+    margin-top: 0.3125rem;
+  }
+
   .container {
-    max-width: 1200px;
+    width: calc(100vw - 20.625rem);
     margin: auto;
-    padding: 60px 0 70px 0;
+    padding: 4.375rem 0;
+
+    @media (max-width: 1200px) {
+      width: 100%;
+    }
   }
 
   .animeLeft {
@@ -74,12 +84,34 @@ body {
     }
   }
 
-  .error {
-    color: red;
-    font-size: 14px;
-    margin-top: 5px;
-    text-align: right;
-    transition: all 0.3s ease;
+  .animeBottom {
+    animation: animeBottom 1.2s forwards;
+  }
+
+  @keyframes animeBottom {
+    0% {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  .animeTop {
+    animation: animeTop 1.2s forwards;
+  }
+
+  @keyframes animeTop {
+    0% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(-130%);
+      opacity: 0;
+    }
   }
 
   .color1 {
@@ -100,6 +132,26 @@ body {
 
   .color5 {
     background-color: #f021b2;
+  }
+
+  .color6 {
+    background-color: #ff8c69;
+  }
+
+  .color7 {
+    background-color: #8b4513;
+  }
+
+  .color8 {
+    background-color: #e57373;
+  }
+
+  .color9 {
+    background-color: #f39c12;
+  }
+
+  .color10 {
+    background-color: #6666cc;
   }
 }
 

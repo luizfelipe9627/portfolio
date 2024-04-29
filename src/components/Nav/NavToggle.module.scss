@@ -1,12 +1,12 @@
 .navToggle {
-  height: 40px;
-  width: 45px;
-  border: 1px solid var(--bg-black-50);
+  height: 2.5rem;
+  width: 2.8125rem;
+  border: 0.0625rem solid var(--bg-black-50);
   cursor: pointer;
   position: fixed;
-  left: 45px;
-  top: 20px;
-  border-radius: 5px;
+  left: 2.8125rem;
+  top: 1.25rem;
+  border-radius: 0.3125rem;
   display: none;
   background-color: var(--bg-black-100);
   justify-content: center;
@@ -15,11 +15,10 @@
 
   @media (max-width: 1200px) {
     display: flex;
-    position: fixed;
 
     &.active {
       display: flex;
-      left: 315px;
+      left: 19.6875rem;
 
       span {
         height: 0;
@@ -37,36 +36,36 @@
     }
   }
 
-  @media (max-width: 425px) {
+  @media (max-width: 426px) {
     &.active {
       left: 80%;
     }
   }
 
   span {
-    width: 18px;
-    height: 2px;
+    width: 1.125rem;
+    height: 0.125rem;
     background-color: var(--skin-color);
     display: inline-block;
     position: relative;
 
     &::before {
       content: "";
-      width: 18px;
-      height: 2px;
+      width: 1.125rem;
+      height: 0.125rem;
       background-color: var(--skin-color);
       position: absolute;
-      top: -6px;
+      top: -0.375rem;
       left: 0;
     }
 
     &::after {
       content: "";
-      width: 18px;
-      height: 2px;
+      width: 1.125rem;
+      height: 0.125rem;
       background-color: var(--skin-color);
       position: absolute;
-      top: 6px;
+      top: 0.375rem;
       right: 0;
     }
   }

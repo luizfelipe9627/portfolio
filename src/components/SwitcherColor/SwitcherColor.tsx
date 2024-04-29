@@ -1,11 +1,16 @@
 import React from "react";
 import styles from "./SwitcherColor.module.scss";
-
+import { useModal } from "../../context/ModalContext";
 import color1 from "../../styles/themes/color1.module.scss";
 import color2 from "../../styles/themes/color2.module.scss";
 import color3 from "../../styles/themes/color3.module.scss";
 import color4 from "../../styles/themes/color4.module.scss";
 import color5 from "../../styles/themes/color5.module.scss";
+import color6 from "../../styles/themes/color6.module.scss";
+import color7 from "../../styles/themes/color7.module.scss";
+import color8 from "../../styles/themes/color8.module.scss";
+import color9 from "../../styles/themes/color9.module.scss";
+import color10 from "../../styles/themes/color10.module.scss";
 
 type ColorModule = {
   name: string;
@@ -18,10 +23,16 @@ const colors: ColorModule[] = [
   { name: "color3", default: { color: color3.color } },
   { name: "color4", default: { color: color4.color } },
   { name: "color5", default: { color: color5.color } },
+  { name: "color6", default: { color: color6.color } },
+  { name: "color7", default: { color: color7.color } },
+  { name: "color8", default: { color: color8.color } },
+  { name: "color9", default: { color: color9.color } },
+  { name: "color10", default: { color: color10.color } },
 ];
 
 export default function SwitcherColor() {
   const [activeTheme, setActiveTheme] = React.useState("");
+  const { openModal } = useModal();
 
   const handleColorClick = (colorModule: ColorModule) => {
     const spans = document.querySelectorAll(".alternate-style");
@@ -97,7 +108,7 @@ export default function SwitcherColor() {
     }
   }, []);
 
-  return (
+  return openModal ? null : (
     <div className={styles.switcherColor}>
       <div className={styles.toggler} onClick={showColors}>
         <i className="fas fa-cog fa-spin"></i>

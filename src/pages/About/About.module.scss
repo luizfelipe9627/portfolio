@@ -1,12 +1,12 @@
 .content {
-  margin: 0 15px;
+  margin: 0 0.9375rem;
 
   .text {
-    margin-bottom: 40px;
+    margin-bottom: 2.5rem;
 
     h3 {
-      font-size: 24px;
-      margin-bottom: 15px;
+      font-size: 1.5rem;
+      margin-bottom: 0.9375rem;
       font-weight: 700;
       color: var(--text-black-900);
 
@@ -16,8 +16,8 @@
     }
 
     p {
-      font-size: 16px;
-      line-height: 25px;
+      font-size: 1rem;
+      line-height: 1.5625rem;
       color: var(--text-black-700);
     }
   }
@@ -25,7 +25,7 @@
   .row {
     display: flex;
 
-    @media (max-width: 767px) {
+    @media (max-width: 768px) {
       display: initial;
     }
 
@@ -33,11 +33,11 @@
       width: 60%;
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      max-height: 135px;
+      max-height: 8.4375rem;
 
-      @media (max-width: 767px) {
+      @media (max-width: 768px) {
         max-height: initial;
-        margin-bottom: 30px;
+        margin-bottom: 1.875rem;
       }
 
       @media (max-width: 991px) {
@@ -51,21 +51,21 @@
 
       .buttons {
         width: max-content;
-        margin-top: 30px;
+        margin-top: 1.875rem;
 
         @media (max-width: 544px) {
           width: 100%;
         }
 
         a {
-          margin-right: 15px;
+          margin-right: 0.9375rem;
 
           @media (max-width: 544px) {
             width: 100%;
             margin-right: 0;
 
             &:nth-child(2) {
-              margin-top: 15px;
+              margin-top: 0.9375rem;
             }
           }
         }
@@ -78,51 +78,61 @@
 
     .skills {
       width: 40%;
-      padding-left: 15px;
+      padding-left: 1.875rem;
 
-      @media (max-width: 767px) {
+      @media (max-width: 768px) {
         width: initial;
+        padding-left: 0;
       }
 
       .row {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        column-gap: 50px;
+        grid-template-columns: repeat(4, 1fr);
+        justify-items: end;
+        gap: 1.125rem;
+
+        @media (min-width: 2000px) {
+          grid-template-columns: repeat(8, 1fr);
+        }
 
         @media (max-width: 991px) {
-          grid-template-columns: 1fr;
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media (max-width: 768px) {
+          grid-template-columns: repeat(4, 1fr);
         }
       }
     }
   }
 
   .education {
-    margin-right: 15px;
+    margin-right: 0.9375rem;
   }
 
   .education,
   .experience {
     width: 50%;
-    margin-top: 30px;
+    margin-top: 1.875rem;
 
-    @media (max-width: 767px) {
+    @media (max-width: 768px) {
       width: 100%;
     }
 
     .title {
-      margin: 0 0 30px 0;
-      font-size: 24px;
+      margin: 0 0 1.875rem 0;
+      font-size: 1.5rem;
       font-weight: 700;
     }
 
     .timeline {
       width: 100%;
       background-color: var(--bg-black-100);
-      padding: 30px 15px;
-      border: 1px solid var(--bg-black-50);
-      border-radius: 10px;
+      padding: 1.875rem 0.9375rem;
+      border: 0.0625rem solid var(--bg-black-50);
+      border-radius: 0.625rem;
       position: relative;
-      box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
+      box-shadow: 0 0 1.25rem rgba(48, 46, 77, 0.15);
     }
   }
 }

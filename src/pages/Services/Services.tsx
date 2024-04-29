@@ -49,6 +49,26 @@ export default function Services() {
             description="Transforme sua interface em uma obra de arte animada, proporcionando uma experiência de usuário envolvente e sofisticada."
             icon="fas fa-paint-brush"
           />
+           <ServiceItem
+            title="Desenvolvimento de APIs Restful"
+            description="Criação de APIs RESTful robustas para interconectar o front-end e o back-end."
+            icon="fas fa-code-branch"
+          />
+          <ServiceItem
+            title="Configuração de Bancos de Dados"
+            description="Configuração de bancos de dados SQL ou NoSQL como MySQL ou MongoDB."
+            icon="fas fa-database"
+          />
+          <ServiceItem
+            title="Autenticação e Autorização"
+            description="Implementação de sistemas de autenticação e autorização seguros, como JWT."
+            icon="fas fa-lock"
+          />
+          <ServiceItem
+            title="Desenvolvimento de CRUD Operations"
+            description="Criação de operações CRUD (Create, Read, Update, Delete) para manipulação de dados."
+            icon="fas fa-server"
+          />
         </div>
       </div>
     </section>

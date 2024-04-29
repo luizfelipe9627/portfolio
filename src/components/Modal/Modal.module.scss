@@ -1,0 +1,201 @@
+.overlay {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  opacity: 1;
+  visibility: visible;
+  transition: all 1.2s ease-in-out;
+
+  &.isClose {
+    visibility: hidden;
+  }
+
+  .modal {
+    background-color: var(--bg-black-100);
+    position: relative;
+    max-width: 50rem;
+    max-height: 28.125rem;
+    display: flex;
+    border-radius: 0.625rem;
+    padding: 0.875rem;
+
+    .buttonClose {
+      position: absolute;
+      top: 0.9375rem;
+      right: 0.9375rem;
+
+      button {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+      }
+
+      i {
+        font-size: 1.5625rem;
+        color: var(--text-black-900);
+      }
+    }
+
+    .img {
+      overflow-y: scroll;
+      border-radius: 0.625rem 0 0 0.625rem;
+      max-width: 50%;
+
+      &::-webkit-scrollbar {
+        width: 0.125rem;
+      }
+
+      img {
+        width: 100%;
+        min-height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .content {
+      padding: 0 1.25rem;
+      overflow-y: scroll;
+      overflow-x: hidden;
+      max-width: 50%;
+
+      &::-webkit-scrollbar {
+        width: 0.125rem;
+      }
+
+      .createdAt {
+        font-size: 0.875rem;
+        font-weight: 400;
+        color: var(--text-black-700);
+      }
+
+      .title {
+        word-wrap: break-word;
+        color: var(--text-black-900);
+        font-size: 1.5rem;
+        margin-right: 2.1875rem;
+      }
+
+      .description {
+        margin-top: 0.5rem;
+        font-size: 1rem;
+        color: var(--text-black-700);
+        line-height: 1.5;
+      }
+
+      .tech {
+        margin: 0.875rem 0;
+
+        h1 {
+          font-size: 1rem;
+          color: var(--text-black-900);
+          margin-bottom: 0.625rem;
+        }
+
+        .skills {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 0.5rem;
+
+          .skill {
+            display: flex;
+            align-items: center;
+            background-color: var(--bg-black-900);
+            padding: 0.5rem 0.75rem;
+            border-radius: 0.625rem;
+
+            &:hover {
+              span {
+                color: var(--skin-color);
+              }
+            }
+
+            img {
+              max-width: initial;
+              width: 1.25rem;
+              height: 1.25rem;
+              margin-right: 0.5rem;
+              border-radius: 0.25rem;
+            }
+
+            span {
+              text-transform: uppercase;
+              font-size: 0.75rem;
+              color: var(--text-black-900);
+              font-weight: 600;
+            }
+          }
+        }
+      }
+
+      .links {
+        margin-bottom: 0.875rem;
+
+        h1 {
+          font-size: 1rem;
+          color: var(--text-black-900);
+          margin-bottom: 0.625rem;
+        }
+
+        .link {
+          display: flex;
+          gap: 0.5rem;
+          align-items: center;
+          flex-wrap: wrap;
+
+          a {
+            font-size: 0.875rem;
+            display: flex;
+            align-items: center;
+            padding: 0.5rem 0.75rem;
+            border-radius: 0.625rem;
+            text-decoration: none;
+            color: var(--text-black-900);
+
+            &:hover {
+              background-color: var(--bg-black-900);
+            }
+
+            i {
+              font-size: 0.875rem;
+              margin-right: 0.5rem;
+            }
+
+            span {
+              font-size: 0.875rem;
+              font-weight: 600;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .overlay {
+    .modal {
+      flex-direction: column;
+      max-width: 90vw;
+      max-height: 70vh;
+      height: 100%;
+
+      .img {
+        margin: 2.4375rem 0 0.875rem 0;
+        max-width: 100%;
+        border-radius: 0.625rem 0.625rem 0 0;
+        height: 50%;
+      }
+
+      .content {
+        max-width: 100%;
+        padding-left: 0;
+        height: 50%;
+      }
+    }
+  }
+}

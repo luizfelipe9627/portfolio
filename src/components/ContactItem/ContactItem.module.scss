@@ -1,26 +1,33 @@
 .contactItem {
-  padding: 20px;
+  padding: 1.25rem;
   text-align: center;
-  margin-bottom: 60px;
-  animation: levitate 2s infinite alternate;
+  margin-bottom: 3.75rem;
+
+  &:nth-child(odd) {
+    animation: downUp 1s infinite;
+  }
+
+  &:nth-child(even) {
+    animation: upDown 1s infinite;
+  }
 
   .icon {
     i {
-      font-size: 25px;
+      font-size: 1.5625rem;
       color: var(--skin-color);
     }
   }
 
   h4 {
-    font-size: 18px;
+    font-size: 1.125rem;
     font-weight: 700;
     color: var(--text-black-900);
-    margin: 15px 0 5px;
+    margin: 0.9375rem 0 0.3125rem;
   }
 
   p {
-    font-size: 16px;
-    line-height: 25px;
+    font-size: 1rem;
+    line-height: 1.5625rem;
     color: var(--text-black-700);
     font-weight: 400;
   }
@@ -33,15 +40,23 @@
     }
   }
 
-  @keyframes levitate {
-    0% {
+  @keyframes downUp {
+    0%,
+    100% {
       transform: translateY(0);
     }
     50% {
-      transform: translateY(-20px);
+      transform: translateY(-0.625rem);
     }
+  }
+
+  @keyframes upDown {
+    0%,
     100% {
       transform: translateY(0);
+    }
+    50% {
+      transform: translateY(0.625rem);
     }
   }
 }

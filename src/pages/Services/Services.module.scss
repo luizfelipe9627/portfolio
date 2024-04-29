@@ -1,14 +1,14 @@
 .row {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
-  padding: 0 15px;
+  gap: 1.875rem;
+  padding: 0 0.9375rem;
 
   @media (max-width: 991px) {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  @media (max-width: 767px) {
+  @media (max-width: 768px) {
     grid-template-columns: 1fr;
   }
 
